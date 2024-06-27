@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-top: 5rem;
+}
+
+footer p {
+    margin-top: 0;
+}
+
+.rodapé {
+    list-style: none;
+}
+
+.rodapé-informacao {
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+}
+
+.rodapé-descrição {
+    flex: 1;
+    text-align: justify;
+}
+
+.rodapé-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rodapé-contato, .rodapé-termosdeuso {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.rodapé-contato li {
+    border: 1px solid #bdc3c7;
+    border-radius: 15%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    list-style: none;
+}
+
+.rodapé-contato a {
+    color: rgb(0, 0, 0);
+}
+
+.rodapé-contato li:hover {
+    border: rgb(21, 255, 0);
+    background-color: rgb(21, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+.rodapé-termosdeuso a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    outline: none; /* Remove a borda de foco */
+    border: none; /* Remove qualquer borda */
+}
+
+.rodapé-termosdeuso a:hover {
+    color: #fe0000;
+}
+
+.rodapé-contato:last-child, .rodapé-termosdeuso:last-child {
+    margin-bottom: 0;
+}
+
+.titulo-contato {
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        display: block;
+        text-align: center;
+        height: auto;
+    }
+
+    .rodapé-informacao,
+    .rodapé-descrição,
+    .rodapé-direita {
+        flex: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .rodapé-descrição{
+        text-align: justify;
+    }
+
+    .rodapé-direita {
+        align-items: center;
+    }
+    
+    .rodapé-contato, .rodapé-termosdeuso {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .rodapé-contato li {
+        margin-right: 5px;
+    }
+}

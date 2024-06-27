@@ -1,0 +1,103 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(6, 5, 6, 0.123);
+}
+
+.container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-descricao,
+.container-contatos {
+    margin: 0 auto; /* Centraliza os cards */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 50%; /* Ajusta a largura máxima do card */
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.container-descricao {
+    margin-bottom: 10px;
+}
+
+.container-contatos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos ul {
+    display: flex;
+}
+
+.contatos li {
+    list-style: none;
+    margin-right: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+    background-color: #fff;
+    cursor: pointer;
+}
+.contatos li:hover{
+    background-color: #bdc3c7;
+}
+
+
+.contatos a {
+    color: rgb(0, 0, 0);
+    font-size: 20px; /* Ajusta o tamanho dos ícones */
+    outline: none; /* Remove a borda de foco */
+    border: none; /* Remove qualquer borda */
+}
+
+.endereco {
+    max-width: 40%;
+    text-align: justify;
+}
+
+.endereco a {
+    color: black;
+    font-size: 20px;
+    outline: none; /* Remove a borda de foco */
+    border: none; /* Remove qualquer borda */
+}
+
+.endereco a:hover {
+    color: #bdc3c7; /* Altera a cor do texto ao passar o mouse */
+}
+
+@media (max-width: 999px) {
+.container-descricao,
+.container-contatos {
+    margin: 0 auto; /* Centraliza os cards */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 80%; /* Ajusta a largura máxima do card */
+    border-radius: 8px;
+    text-align: justify;
+}
+.container-descricao {
+    margin-bottom: 10px;
+}
+}

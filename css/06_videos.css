@@ -1,0 +1,256 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.container-conteudo {
+    position: relative;
+    justify-content: center;
+}
+
+/* Estilos do card de vídeo */
+.container-videos {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 450px; /* Ajusta a largura máxima do card */
+    position: absolute; /* Sobrepõe os cards */
+}
+
+.container-comentario {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s;
+    max-width: 350px; /* Ajusta a largura máxima do card */
+    padding: 20px;
+    height: 100%;
+    max-height: 467px; /* Define a altura máxima */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mantém o card de vídeos à frente do card de comentários */
+.container-videos {
+    z-index: 2;
+}
+
+.container-comentario {
+    transform: translateX(0%); /* Move o card de comentários para a direita */
+}
+
+.container-videos.active {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.container-comentario.active {
+    z-index: 2; /* Mantém o card de comentários atrás do card de vídeos */
+    transform: translateX(128%);
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.txt {
+    padding: 15px;
+}
+
+.txt h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.txt p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Estilos do autor */
+.autor {
+    display: flex;
+    align-items: center;
+}
+
+.autor img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilos dos ícones */
+.incons {
+    display: flex;
+    align-items: center;
+}
+
+#curtir {
+    margin-right: 1px;
+    font-size: 20px;
+}
+
+#curtir:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#likeCount {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+#comentar {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+#compartilhar {
+    font-size: 20px;
+}
+
+#comentar:hover,
+#compartilhar:hover {
+    cursor: pointer;
+}
+
+.liked {
+    color: red;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px; /* Ajusta a largura do modal */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.author-info {
+    display: flex;
+}
+
+.author-info img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.author-info div {
+    flex: 1;
+}
+
+#shareLink {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para a seção de comentários */
+.comentarios {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.comentarios h3 {
+    margin-bottom: 15px;
+}
+
+#commentSectionContainer {
+    flex: 1;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-bottom: 10px;
+}
+
+#commentSection {
+    padding-right: 10px; /* Para evitar que o texto fique atrás da barra de rolagem */
+}
+
+.comment {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+#commentForm {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#commentInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/07_fotos.css">
+        <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
+        
+    <title>Fotos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="album">
+            <div class="imagens">
+                <img src="midias/Imagem do WhatsApp de 2024-06-18 à(s) 13.19.58_7f2a72e9.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <div class="txt">
+                    <h2>ENEKI</h2>
+                    <p>Encontro nacional dos estudantes quilombolas</p>
+                    <p>2023</p>
+                    <p>Quantidade de Fotos</p>
+                </div>
+                <div class="btn-container">
+                    <button class="bts" onclick="showModal('enekimodal')">Ver Fotos</button>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais álbuns aqui -->
+    </div>
+
+    <!-- Modal de Álbuns -->
+    <div id="enekimodal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('enekimodal')">&times;</span>
+            <h2>ENEKI - 2023</h2>
+            <div class="modal-fotos">
+                <img id="ft" src="midias/foto_teste_01.jpg" alt="" onclick="showImageModal(this, 0)">
+                <img src="midias/Imagem do WhatsApp de 2024-06-18 à(s) 13.19.58_7f2a72e9.jpg" alt="" onclick="showImageModal(this, 1)">
+                <img src="midias/foto_teste_02.jpg" alt="" onclick="showImageModal(this, 2)" >
+                <img src="midias/Calourada - CEQ.png" alt="" onclick="showImageModal(this, 3)">
+                <img src="midias/foto_teste_04.jpg" alt="" onclick="showImageModal(this, 4)">
+                <!-- Adicione mais imagens aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Visualização de Imagem -->
+    <div id="imageModal" class="image-modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="image-modal-content" id="imageModalContent">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <script src="javascript/fotos.js"></script>
+</body>
+</html>

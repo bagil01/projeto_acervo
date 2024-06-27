@@ -1,0 +1,126 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+*{
+  padding: 0;
+}
+button.neumorphic {
+  width: 15rem; /* Defina a largura desejada */
+  height: 10rem; /* Defina a altura desejada */
+  border: 0.6rem solid rgb(255, 255, 255);
+  border-radius: 1rem;
+  color: hsl(0 0% 10%);
+  background: rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  margin-left: .5rem;
+  
+  --shadow: 
+    -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+    .5rem .5rem 1rem hsl(0 0% 50% / .5);
+  box-shadow: var(--shadow);
+  outline: none;  
+  transition: all 0.1s;
+  
+  &:hover, &:focus-visible {
+    color: hsl(10 80% 50%);
+    transform: scale(1.1); /* Use transform em vez de scale */
+
+  }
+  &:active, &.active {
+    box-shadow:
+      var(--shadow),
+      inset .5rem .5rem 1rem hsla(0, 2%, 8%, 0.5),
+      inset -.5rem -.5rem 1rem hsla(0, 0%, 6%, 0.75);
+    color: hsl(10 80% 50%);
+    > i { font-size: 2.8rem; } /* Ajuste o tamanho do ícone */
+    > span { font-size: 1.3rem; } /* Ajuste o tamanho do texto */
+  }
+
+  > i {
+    font-size: 3rem; /* Ajuste o tamanho do ícone */
+  }
+  >img{
+    height: 75px;
+    width: 80px;
+    justify-content: center;
+  }
+  > span {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem; /* Ajuste o tamanho do texto */
+  }
+}
+
+body {
+  background-color: #cecece;
+  padding: 0;
+}
+.buttons {
+  display: grid;
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); /* Aumente min(8rem, 100%) para min(10rem, 100%) */
+  align-items: center;
+  gap: 7rem ; /* Ajuste o espaçamento entre os botões */
+}
+
+@media screen and (max-width: 500px) {
+  button.neumorphic {
+    width: 9rem; /* Defina a largura desejada */
+    height: 8rem; /* Defina a altura desejada */
+    border: 0.6rem solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    color: hsl(0 0% 10%);
+    background: rgb(255, 255, 255);
+    display: grid;
+    place-content: center;
+    
+    
+    --shadow: 
+      -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+      .5rem .5rem 1rem hsl(0 0% 50% / .5);
+    box-shadow: var(--shadow);
+    outline: none;  
+    transition: all 0.1s;
+    
+    &:hover, &:focus-visible {
+      color: hsl(10 80% 50%);
+      transform: scale(1.1); /* Use transform em vez de scale */
+  
+    }
+    &:active, &.active {
+      box-shadow:
+        var(--shadow),
+        inset .5rem .5rem 1rem hsla(0, 2%, 8%, 0.5),
+        inset -.5rem -.5rem 1rem hsla(0, 0%, 6%, 0.75);
+      color: hsl(10 80% 50%);
+      > i { font-size: 2.8rem; } /* Ajuste o tamanho do ícone */
+      > span { font-size: 1.3rem; } /* Ajuste o tamanho do texto */
+    }
+  
+    > i {
+      font-size: 2rem; /* Ajuste o tamanho do ícone */
+    }
+    >img{
+      height: 65px;
+      width: 70px;
+      justify-content: center;
+    }
+    > span {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem; /* Ajuste o tamanho do texto */
+    }
+  }
+  
+  body {
+    background-color: #cecece;
+    padding: 0;
+  }
+  .buttons {
+    display: grid;
+    width: min(75rem, 100%);
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); /* Aumente min(8rem, 100%) para min(10rem, 100%) */
+    align-items: center;
+    gap: 1.5rem ; /* Ajuste o espaçamento entre os botões */
+  }
+}

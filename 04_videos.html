@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>videos</title>
+    <link rel="stylesheet" href="css/06_videos.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Conteúdo principal -->
+        <div class="container-conteudo">
+            <div class="container-videos">
+                <!-- Seção de Vídeo -->
+                <div class="video">
+                    <video id="video1" src="midias/video_teste.mp4" controls></video>
+                </div>
+                <div class="txt">
+                    <h2>Título 2</h2>
+                    <div class="autor">
+                        <a href="#" onclick="showAuthorCard('autor1')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                        <h3>Nome do autor</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                    <p>Data 2</p>
+                    <div class="incons">
+                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                        <span id="likeCount">0</span>
+                        <i id="comentar" class="fa-regular fa-comment"></i>
+                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video1')"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Seção de Comentários -->
+            <div class="container-comentario">
+                <h3>Comentários (<span id="commentCount">0</span>)</h3>
+                <div id="commentSectionContainer">
+                    <div id="commentSection"></div>
+                </div>
+                <form id="commentForm" onsubmit="submitComment(event)">
+                    <input type="text" id="commentInput" placeholder="Adicione um comentário..." required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para o card de autor -->
+    <div id="authorCard" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthorCard()">&times;</span>
+            <div class="author-info">
+                <img id="authorImage" src="" alt="Foto do autor">
+                <div>
+                    <h3 id="authorName">Nome do Autor</h3>
+                    <p id="authorAge">Idade: XX</p>
+                    <p id="authorLocation">Morador de: Localização</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para o card de compartilhamento -->
+    <div id="shareCard" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeShareCard()">&times;</span>
+            <h3>Compartilhar este vídeo</h3>
+            <input type="text" id="shareLink" readonly />
+            <button onclick="copyToClipboard()">Copiar</button>
+        </div>
+    </div>
+    <script src="javascript/videos.js"></script>
+</body>
+</html>
