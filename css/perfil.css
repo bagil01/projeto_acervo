@@ -1,4 +1,5 @@
-*{
+/* Estilos existentes */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +19,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
     text-align: center;
     padding: 20px;
 }
@@ -28,8 +29,8 @@ body {
 }
 
 .profile-picture {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -56,7 +57,9 @@ body {
     font-size: 18px;
     color: #333;
 }
-
+.profile-info p{
+    text-align: justify;
+}
 .profile-bio {
     font-size: 14px;
     color: #555;
@@ -77,8 +80,8 @@ body {
     margin-top: 20px;
 }
 
-.follow-button,
-.message-button {
+.edit-button,
+.delete-button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -89,7 +92,108 @@ body {
     font-size: 14px;
 }
 
-.follow-button:hover,
-.message-button:hover {
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+}
+
+.nome,
+.foto-de-perfil,
+.sobre-mim,
+.senha {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 16px;
+    border-top: 1px solid #ccc;
+}
+
+.nome {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: none;
+}
+
+.senha {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nome:hover,
+.foto-de-perfil:hover,
+.sobre-mim:hover,
+.senha:hover {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-content button:hover {
     background-color: #0056b3;
 }
