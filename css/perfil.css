@@ -57,7 +57,7 @@ body {
     font-size: 18px;
     color: #333;
 }
-.profile-info p{
+.profile-info p {
     text-align: justify;
 }
 .profile-bio {
@@ -193,7 +193,71 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
+.form-senha label,
+.form-nome label,
+.form-foto label,
+.form-sobre label {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 300px;
+}
+.form-foto label{
+    
+}
+
+.form-foto input{
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius:50%;
+    border: 1px solid #ccc;
+}
+.form-senha input,
+.form-nome input,
+.form-sobre textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.form-nome p, .form-sobre p{
+    color: red;
+    font-size: 15px;
+    margin-top: 15px;
+}
+#concluir,
+#concluir-nome,
+#concluir-foto,
+#concluir-sobre,
+#concluir-senha {
+    background-color: #268d00;
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#concluir:hover,
+#concluir-nome:hover,
+#concluir-foto:hover,
+#concluir-sobre:hover,
+#concluir-senha:hover {
+    background-color: #113a02;
+    transition: .5s;
+}
 
 .modal-content button:hover {
     background-color: #0056b3;
+}
+
+.form-sobre textarea {
+    height: 100px;
+    resize: none;
 }

@@ -35,25 +35,83 @@
             <span class="close">&times;</span>
             <h2>Editar Perfil</h2>
             <div class="conteudo">
-            <div class="nome">
-                <h3>nome</h3>
-                <i class="fa-regular fa-pen-to-square"></i>
+                <div class="nome">
+                    <h3>Nome</h3>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+                <div class="foto-de-perfil">
+                    <h3>Foto de Perfil</h3>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+                <div class="sobre-mim">
+                    <h3>Sobre Mim</h3>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+                <div class="senha">
+                    <h3>Senha</h3>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
             </div>
-            <div class="foto-de-perfil">
-                <h3>foto de perfil</h3>
-                <i class="fa-regular fa-pen-to-square"></i>
-            </div>
-            <div class="sobre-mim">
-                <h3>senha</h3>
-                <i class="fa-regular fa-pen-to-square"></i>
-            </div>
-            <div class="senha">
-                <h3>email</h3>
-                <i class="fa-regular fa-pen-to-square"></i>
-            </div>
-        </div>
         </div>
     </div>
+
+    <div id="modal-nome" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Nome</h2>
+            <form class="form-nome">
+                <label for="nome">
+                    <input type="text" name="nome" id="nome" placeholder="Novo nome">
+                </label>
+                <p class="informe">Por favor! Não usar palavras palavras onfensivas ou preconceituosa.</p>
+                <button id="concluir-nome">Concluir</button>
+            </form>
+        </div>
+    </div>
+    <div id="modal-foto" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Foto de Perfil</h2>
+            <form class="form-foto">
+                <label for="foto">
+                    <input type="file" name="foto" id="foto">
+                </label>
+                <button id="concluir-foto">Concluir</button>
+            </form>
+        </div>
+    </div>
+    <div id="modal-sobre" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Sobre Mim</h2>
+            <form class="form-sobre">
+                <label for="sobre">
+                    <textarea name="sobre" id="sobre" placeholder="Escreva sobre você"></textarea>
+                </label>
+                <p class="informe">Por favor! Não usar palavras palavras onfensivas ou preconceituosa.</p>
+                <button id="concluir-sobre">Concluir</button>
+            </form>
+        </div>
+    </div>
+    <div id="modal-senha" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Senha</h2>
+            <form class="form-senha">
+                <label for="senha-atual">
+                    <input type="password" name="senha-atual" id="senha-atual" placeholder="Senha atual">
+                </label>
+                <label for="nova-senha">
+                    <input type="password" name="nova-senha" id="nova-senha" placeholder="Nova senha">
+                </label>
+                <label for="confirmar-senha">
+                    <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirmar nova senha">
+                </label>
+                <button id="concluir-senha">Concluir</button>
+            </form>
+        </div>
+    </div>
+
     <script src="javascript/perfil.js"></script>
 </body>
 </html>
