@@ -28,6 +28,7 @@ body {
     max-width: 50%; /* Ajusta a largura máxima do card */
     border-radius: 8px;
     text-align: justify;
+    margin-bottom: 3rem;
 }
 
 .container-descricao {
@@ -73,8 +74,10 @@ body {
     text-align: justify;
 }
 
+
 .endereco a {
     color: black;
+    list-style: none;
     font-size: 20px;
     outline: none; /* Remove a borda de foco */
     border: none; /* Remove qualquer borda */

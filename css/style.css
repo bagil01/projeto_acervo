@@ -63,7 +63,7 @@ body {
   gap: 7rem ; /* Ajuste o espaçamento entre os botões */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   button.neumorphic {
     width: 9rem; /* Defina a largura desejada */
     height: 8rem; /* Defina a altura desejada */
