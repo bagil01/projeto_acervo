@@ -4,16 +4,21 @@
   box-sizing: border-box;
 }
 body {
-  padding: 0%;
+  padding: 0;
   margin-bottom: 20px;
 }
 .fundo {
   display: flex;
+  flex-wrap: wrap;
   height: 30vh;
-  background-color: green;
   color: #fff;
   padding: 20px;
   justify-content: space-between;
+  align-items: center;
+  background-image: url('midias/AfricanArtConcepts\ -\ Etsy.jpeg');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem no fundo */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 .textoPrincipal {
   color: #ffffff;
@@ -21,13 +26,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  text-align: center;
+  width: 100%;
 }
 .logo {
   color: #000000;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 .logo:hover {
   color: #c4c4c4;
@@ -45,58 +54,62 @@ body {
   margin-right: 10px;
   list-style: none;
 }
-.fundo a{
+.fundo a {
   color: #000000;
+  text-decoration: none;
 }
-.fundo a:hover{
-color: #95a5a6;
-}
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #000000;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+.fundo a:hover {
+  color: #95a5a6;
 }
 nav {
   display: flex;
-  justify-content: left;
+  justify-content:left; /* Centraliza os itens do menu */
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 9vh;
   margin-bottom: 40px;
+  padding: 0 20px;
 }
-
-.sub-menu {
-  color: #fff;
-  list-style-type: none;
-  display: none;
-  position: relative;
-}
-.nav-list{
+.nav-list {
   display: flex;
-  position: absolute;
-  width: 90%;
-  justify-content: space-between;
-}
-ul{
-  display: flex;
+  justify-content: center; /* Centraliza os links dentro da lista */
+  align-items: center;
 }
 .nav-list li {
   display: flex;
   letter-spacing: 3px;
   list-style: none;
-  outline: none; /* Remove a borda de foco */
-  border: none; /* Remove qualquer borda */
+  outline: none;
+  border: none;
+  margin: 0 79px; /* Define a margem esquerda e direita */
 }
-
-.nav-list a{
+.nav-list a {
   color: aquamarine;
-    outline: none; /* Remove a borda de foco */
-    border: none; /* Remove qualquer borda */
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-/*responsividade*/
+.nav-list a:hover {
+  color: #95a5a6;
+}
+.icons-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icons-right li {
+  margin-right: 10px; /* Espaçamento entre os itens */
+}
+.icons-right a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.icons-right a:hover {
+  color: #95a5a6;
+}
 .mobile-menu {
   display: none;
   cursor: pointer;
@@ -110,45 +123,43 @@ ul{
 }
 @media (max-width: 999px) {
   body {
-      overflow-x: hidden,scroll,visible,clip,auto;
+    overflow-x: hidden;
   }
   .nav-list {
-      display: none;
-      position: absolute;
-      top: 37vh;
-      right: 0;
-      width: 30vw;
-      height: 60vh;
-      background: #23232e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-      z-index: 2;
+    display: none;
+    position: absolute;
+    top: 35vh;
+    right: 0;
+    width: 45vw;
+    height: 50vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 2;
   }
   .nav-list li {
-      margin-left: 0;
-      opacity: 0;
-      
+    margin-left: 0;
   }
   .mobile-menu {
-      display: block;
+    display: block;
+    text-align: center;
   }
 }
 .nav-list.active {
   display: flex;
   transform: translateX(0);
 }
-
 @keyframes navLinkFade {
   from {
-      opacity: 0;
-      transform: translateX(50px);
+    opacity: 0;
+    transform: translateX(50px);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .mobile-menu.active .line1 {
@@ -160,6 +171,3 @@ ul{
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
-
-
-

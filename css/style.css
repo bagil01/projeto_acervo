@@ -63,7 +63,7 @@ body {
   gap: 7rem ; /* Ajuste o espaçamento entre os botões */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width:999px) {
   button.neumorphic {
     width: 9rem; /* Defina a largura desejada */
     height: 8rem; /* Defina a altura desejada */
@@ -121,6 +121,6 @@ body {
     margin-inline: auto;
     grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); /* Aumente min(8rem, 100%) para min(10rem, 100%) */
     align-items: center;
-    gap: 1.5rem ; /* Ajuste o espaçamento entre os botões */
+    gap: 2rem ; /* Ajuste o espaçamento entre os botões */
   }
 }
