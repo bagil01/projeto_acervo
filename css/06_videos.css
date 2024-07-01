@@ -15,20 +15,20 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     flex: 1;
     position: relative;   /* Adicionado para controle de sobreposição */
 }
 
 .container-conteudo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
     margin: 0 auto;
-   position: relative;  /* Adicionado para controle de sobreposição */
+    position: relative;  /* Adicionado para controle de sobreposição */
 }
 
 .container-videos {
@@ -41,6 +41,7 @@ body {
     z-index: 2; /* Card de vídeos com maior z-index */
     position: relative;  /* Adicionado para controle de sobreposição */
     margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .container-comentario {
@@ -59,9 +60,16 @@ body {
 }
 
 
-.video video {
+.video video{
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0;
+}
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none; 
     display: block;
     margin: 0;
 }
@@ -216,17 +224,17 @@ body {
 }
 
 .container-comentario {
-    transform: translateX(0%); /* Move o card de comentários para a direita */
+    transform: translateX(32%); /* Move o card de comentários para a direita */
 }
 
 .container-videos.active {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    z-index: 5;
 }
 
 .container-comentario.active {
-    z-index: 1; /* Mantém o card de comentários atrás do card de vídeos */
-    transform: translateX(114%);
+ /* Mantém o card de comentários atrás do card de vídeos */
+    transform: translateX(146%);
+    z-index: 4;
 
 }
 

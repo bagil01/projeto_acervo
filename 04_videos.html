@@ -35,9 +35,9 @@
         <!-- Conteúdo principal -->
         <div class="container-conteudo">
             <div class="container-videos">
-                <!-- Seção de Vídeo -->
+                <!-- Seção de Vídeo Local -->
                 <div class="video">
-                    <video id="video1" src="midias/video_teste.mp4" controls></video>
+                    <video id="video1" src="midias/video_teste.mp4 " controls allow ="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></video>
                 </div>
                 <div class="txt">
                     <h2>Título 2</h2>
@@ -52,6 +52,70 @@
                         <span id="likeCount">0</span>
                         <i id="comentar" class="fa-regular fa-comment"></i>
                         <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video1')"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Vídeo YouTube -->
+            
+            <div class="container-videos">
+                <div class="video">
+                    <iframe  src="https://www.youtube-nocookie.com/embed/Eu9qgiC-QYI?si=j82UTDuAMfG-NEVG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="txt">
+                    <h2>Título do Vídeo YouTube</h2>
+                    <div class="autor">
+                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                        <h3>Nome do autor</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                    <p>Data do vídeo</p>
+                    <div class="incons">
+                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                        <span id="likeCount">0</span>
+                        <i id="comentar" class="fa-regular fa-comment"></i>
+                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-videos">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/amN9pBDZbIU?si=Vtszhl0wKvdOrr4y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="txt">
+                    <h2>Título do Vídeo YouTube</h2>
+                    <div class="autor">
+                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                        <h3>Nome do autor</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                    <p>Data do vídeo</p>
+                    <div class="incons">
+                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                        <span id="likeCount">0</span>
+                        <i id="comentar" class="fa-regular fa-comment"></i>
+                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container-videos">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8aCN-B61LQ4?si=0M3vN1TR5GE-EkZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="txt">
+                    <h2>Título do Vídeo YouTube</h2>
+                    <div class="autor">
+                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                        <h3>Nome do autor</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                    <p>Data do vídeo</p>
+                    <div class="incons">
+                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                        <span id="likeCount">0</span>
+                        <i id="comentar" class="fa-regular fa-comment"></i>
+                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
                     </div>
                 </div>
             </div>

@@ -83,6 +83,12 @@ document.getElementById('comentar').addEventListener('click', function() {
     comentarioCard.classList.toggle('active');
 });
 
+document.getElementById('comentar').addEventListener('click', function() {
+    var comentarioCard = document.querySelector('.container-videos');
+    comentarioCard.classList.toggle('active');
+});
+
+
 /**
  * Função para enviar um comentário
  * @param {Event} event - Evento de envio do formulário
