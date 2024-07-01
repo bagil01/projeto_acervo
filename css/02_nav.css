@@ -15,7 +15,7 @@ body {
   padding: 20px;
   justify-content: space-between;
   align-items: center;
-  background-image: url('midias/AfricanArtConcepts\ -\ Etsy.jpeg');
+  background-color: chartreuse;
   background-size: cover; /* Faz a imagem cobrir todo o fundo */
   background-position: center; /* Centraliza a imagem no fundo */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
@@ -151,6 +151,7 @@ nav {
 .nav-list.active {
   display: flex;
   transform: translateX(0);
+  z-index: 5;
 }
 @keyframes navLinkFade {
   from {

@@ -63,7 +63,7 @@ body {
     text-align: justify;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 999px) {
     .container-descricao {
         display: block;
         justify-content: center;

@@ -79,7 +79,7 @@ body {
     background-color: #fff;
     color: green;
 }
-.btn-second {
+.btn-second,.btn-secondo {
     background-color: green;
     border: 1px solid green;
     transition: background-color .5s;
