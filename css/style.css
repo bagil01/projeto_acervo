@@ -13,6 +13,7 @@ button.neumorphic {
   display: grid;
   place-content: center;
   margin-left: .5rem;
+  cursor: pointer;
   
   --shadow: 
     -.5rem -.5rem 1rem hsl(0 0% 100% / .75),

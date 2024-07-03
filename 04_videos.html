@@ -14,7 +14,12 @@
     <header>
         <div class="fundo">
             <a class="logo" href="02_principal.html">ADCQ</a>
-            <h1 class="textoPrincipal">ACERVO DIGITAL DE CULTURA QUILOMBOLA</h1>
+            <ul class="icons-right">
+                <li><a href="09_perfil.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="09_perfil.html"><i class="fa-solid fa-gear"></i></a></li>
+            </ul>
+            
+            <h1 class="textoPrincipal">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
         </div>
         <nav class="menu">
             <div class="mobile-menu">
@@ -23,149 +28,148 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="03_descrição.html">Início</a></li>
-                <li><a href="04_videos.html">videos</a></li>
-                <li><a href="05_fotos.html">Fotos</a></li>
-                <li><a href="08_diretoria.html">Diretoria</a></li>
-                <li><a href="#">Homenagem</a></li>
+                <li><a href="02_principal.html">Início</a></li>
+                <li><a href="07_sobre.html">Sobre</a></li>
+                <li><a href="06_eventos.html">Eventos</a></li>
+                <li><a href="#">Doe - los</a></li>
             </ul>
         </nav>
     </header>
+    
     <div class="container">
         <!-- Conteúdo principal -->
         <div class="container-conteudo">
-            <div class="container-videos">
-                <!-- Seção de Vídeo Local -->
-                <div class="video">
-                    <video id="video1" src="midias/video_teste.mp4 " controls allow ="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></video>
+            <div class="video-container" id="videoContainer1">
+                <div class="container-videos">
+                    <!-- Video local -->
+                    <div class="video">
+                        <video id="video1" src="midias/video_teste.mp4" controls></video>
+                    </div>
+                    <div class="txt">
+                        <h2>Título 2</h2>
+                        <div class="autor">
+                            <a href="#" onclick="showAuthorCard('autor1')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                            <h3>Nome do autor</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                        <p>Data 2</p>
+                        <div class="incons">
+                            <i class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                            <span class="likeCount">0</span>
+                            <i class="fa-regular fa-comment" onclick="toggleCommentSection('commentContainer1')"></i>
+                            <i class="fa-solid fa-share" onclick="showShareCard('video1')"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="txt">
-                    <h2>Título 2</h2>
-                    <div class="autor">
-                        <a href="#" onclick="showAuthorCard('autor1')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
-                        <h3>Nome do autor</h3>
+                <div class="container-comentario" id="commentContainer1">
+                    <h3>Comentários (<span class="commentCount">0</span>)</h3>
+                    <div class="commentSectionContainer">
+                        <div class="commentSection"></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
-                    <p>Data 2</p>
-                    <div class="incons">
-                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
-                        <span id="likeCount">0</span>
-                        <i id="comentar" class="fa-regular fa-comment"></i>
-                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video1')"></i>
-                    </div>
+                    <form onsubmit="submitComment(event, 'commentContainer1')">
+                        <input type="text" class="commentInput" placeholder="Adicione um comentário..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
-
             <!-- Seção de Vídeo YouTube -->
-            
-            <div class="container-videos">
-                <div class="video">
-                    <iframe  src="https://www.youtube-nocookie.com/embed/Eu9qgiC-QYI?si=j82UTDuAMfG-NEVG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="txt">
-                    <h2>Título do Vídeo YouTube</h2>
-                    <div class="autor">
-                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
-                        <h3>Nome do autor</h3>
+            <div class="video-container" id="videoContainer2">
+                <div class="container-videos">
+                    <!-- Video YouTube -->
+                    <div class="video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/Eu9qgiC-QYI?si=j82UTDuAMfG-NEVG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
-                    <p>Data do vídeo</p>
-                    <div class="incons">
-                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
-                        <span id="likeCount">0</span>
-                        <i id="comentar" class="fa-regular fa-comment"></i>
-                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-videos">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/amN9pBDZbIU?si=Vtszhl0wKvdOrr4y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="txt">
-                    <h2>Título do Vídeo YouTube</h2>
-                    <div class="autor">
-                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
-                        <h3>Nome do autor</h3>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
-                    <p>Data do vídeo</p>
-                    <div class="incons">
-                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
-                        <span id="likeCount">0</span>
-                        <i id="comentar" class="fa-regular fa-comment"></i>
-                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
+                    <div class="txt">
+                        <h2>Memória do Movimento Quilombola em Santarém</h2>
+                        <div class="autor">
+                            <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                            <h3>Dileudo Guimarães</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                        <p>Data 2</p>
+                        <div class="incons">
+                            <i class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                            <span class="likeCount">0</span>
+                            <i class="fa-regular fa-comment" onclick="toggleCommentSection('commentContainer2')"></i>
+                            <i class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-videos">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8aCN-B61LQ4?si=0M3vN1TR5GE-EkZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="txt">
-                    <h2>Título do Vídeo YouTube</h2>
-                    <div class="autor">
-                        <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
-                        <h3>Nome do autor</h3>
+                <div class="container-comentario" id="commentContainer2">
+                    <h3>Comentários (<span class="commentCount">0</span>)</h3>
+                    <div class="commentSectionContainer">
+                        <div class="commentSection"></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
-                    <p>Data do vídeo</p>
-                    <div class="incons">
-                        <i id="curtir" class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
-                        <span id="likeCount">0</span>
-                        <i id="comentar" class="fa-regular fa-comment"></i>
-                        <i id="compartilhar" class="fa-solid fa-share" onclick="showShareCard('video2')"></i>
+                    <form onsubmit="submitComment(event, 'commentContainer2')">
+                        <input type="text" class="commentInput" placeholder="Adicione um comentário..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="video-container" id="videoContainer3">
+                <div class="container-videos">
+                    <!-- Video YouTube -->
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/DxI6UT_VqqE?si=y_ybxyJewdcXti-i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="txt">
+                        <h2>Memória do Movimento Quilombola em Santarém</h2>
+                        <div class="autor">
+                            <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                            <h3>Dileudo Guimarães</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                        <p>Data 2</p>
+                        <div class="incons">
+                            <i class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                            <span class="likeCount">0</span>
+                            <i class="fa-regular fa-comment" onclick="toggleCommentSection('commentContainer3')"></i>
+                            <i class="fa-solid fa-share" onclick="showShareCard('video3')"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Seção de Comentários -->
-            <div class="container-comentario">
-                <h3>Comentários (<span id="commentCount">0</span>)</h3>
-                <div id="commentSectionContainer">
-                    <div id="commentSection"></div>
+                <div class="container-comentario" id="commentContainer3">
+                    <h3>Comentários (<span class="commentCount">0</span>)</h3>
+                    <div class="commentSectionContainer">
+                        <div class="commentSection"></div>
+                    </div>
+                    <form onsubmit="submitComment(event, 'commentContainer3')">
+                        <input type="text" class="commentInput" placeholder="Adicione um comentário..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
-                <form id="commentForm" onsubmit="submitComment(event)">
-                    <input type="text" id="commentInput" placeholder="Adicione um comentário..." required>
-                    <button type="submit">Enviar</button>
-                </form>
             </div>
-        </div>
-    </div>
-    <footer class="rodapé">
-        <div class="rodapé rodapé-informacao">
-            <h2 class="logo">ADCQ</h2>
-            <p>&copy; 2024 ADCQ.</p>
-            <p>Todos os direitos reservados.</p>
-        </div>
-    
-        <div class="rodapé rodapé-descrição">
-            <p class="descrição">Somos uma iniciativa estudantil e independente que busca preservar e espalhar os saberes, histórias e vivências dos povos quilombolas de Santarém.</p>
-        </div>
-    
-        <div class="rodapé rodapé-direita">
-            <div class="rodapé rodapé-contato">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
-            </div>
-            <div class="rodapé rodapé-termosdeuso">
-                <a href="#">Termos de Uso e Política de Privacidade</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal para o card de autor -->
-    <div id="authorCard" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAuthorCard()">&times;</span>
-            <div class="author-info">
-                <img id="authorImage" src="" alt="Foto do autor">
-                <div>
-                    <h3 id="authorName">Nome do Autor</h3>
-                    <p id="authorAge">Idade: XX</p>
-                    <p id="authorLocation">Morador de: Localização</p>
+            <div class="video-container" id="videoContainer4">
+                <div class="container-videos">
+                    <!-- Video YouTube -->
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/XrNqtlSp5tU?si=wPl_v8OGOwJbMF3r"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="txt">
+                        <h2>Memória do Movimento Quilombola em Santarém</h2>
+                        <div class="autor">
+                            <a href="#" onclick="showAuthorCard('autor2')"><img src="midias/imagem-perfil.jpg" alt="Imagem de perfil"></a>
+                            <h3>Benedito Mota</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet nam provident corporis deleniti, esse laborum debitis.</p>
+                        <p>Data 2</p>
+                        <div class="incons">
+                            <i class="fa-solid fa-heart" onclick="toggleLike(this)"></i>
+                            <span class="likeCount">0</span>
+                            <i class="fa-regular fa-comment" onclick="toggleCommentSection('commentContainer4')"></i>
+                            <i class="fa-solid fa-share" onclick="showShareCard('video4')"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-comentario" id="commentContainer4">
+                    <h3>Comentários (<span class="commentCount">0</span>)</h3>
+                    <div class="commentSectionContainer">
+                        <div class="commentSection"></div>
+                    </div>
+                    <form onsubmit="submitComment(event, 'commentContainer4')">
+                        <input type="text" class="commentInput" placeholder="Adicione um comentário..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>

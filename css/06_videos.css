@@ -1,4 +1,3 @@
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -31,44 +30,60 @@ body {
     position: relative;  /* Adicionado para controle de sobreposição */
 }
 
+.video-container {
+    position: relative;
+}
+
 .container-videos {
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
     transition: transform 0.3s;
     width: 400px;
     height: 440px;
     max-width: 500px; /* Ajusta a largura máxima do card */
-    z-index: 2; /* Card de vídeos com maior z-index */
+    z-index: 3; /* Card de vídeos com maior z-index */
     position: relative;  /* Adicionado para controle de sobreposição */
     margin-bottom: 20px;
     margin-right: 20px;
 }
 
 .container-comentario {
+    display: flex; /* Começa escondido */
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s;
-    width: 350px; /* Ajusta a largura máxima do card */
+    width: 300px; /* Ajusta a largura máxima do card */
     height: 440px;
     padding: 20px;
-    display: flex;
     flex-direction: column;
-    z-index: 1; /* Card de comentários com menor z-index */
-    position: absolute; /*Card de comentários fica posicionado em relação ao container */
+    z-index: 2; /* Card de comentários com menor z-index */
+    position: absolute; /* Card de comentários fica posicionado em relação ao container */
     top: 0; /* Posiciona o card de comentários no topo do container */
-    left: 0; /* Posiciona o card de comentários no lado esquerdo do container */
+    left: 100%; /* Inicialmente fora da tela, à direita do vídeo */
+    transform: translateX(0); /* Movimenta para a direita ao ser exibido */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+    overflow-y: auto; /* Adicionado para permitir rolagem nos comentários */
+}
+.container-comentario{
+    transform: translateX(-120%);
+}
+.container-comentario.active {
+    display: flex; /* Exibe o card */
+    transform: translateX(-7%); /* Move o card para a esquerda */
+    z-index: 2;
 }
 
 
-.video video{
+
+.video video {
     width: 100%;
     height: auto;
     display: block;
     margin: 0;
 }
+
 iframe {
     width: 100%;
-    height: 200px;
+    height: 220px;
     border: none; 
     display: block;
     margin: 0;
@@ -79,8 +94,8 @@ iframe {
 }
 
 .txt h2 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+    font-size: 1.10rem;
+    margin-bottom: 5px;
 }
 
 .txt p {
@@ -92,12 +107,11 @@ iframe {
 .autor {
     display: flex;
     align-items: center;
-    z-index: 3;
 }
 
 .autor img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -109,35 +123,21 @@ iframe {
     align-items: center;
 }
 
-#curtir {
-    margin-right: 1px;
+.incons i {
+    margin-right: 15px;
     font-size: 20px;
+    cursor: pointer;
 }
 
-#curtir:hover {
+.incons i:hover {
     color: red;
-    cursor: pointer;
-}
-
-#likeCount {
     margin-right: 15px;
-    font-size: 20px;
 }
 
-#comentar {
+.likeCount{
+    margin-left: -13px;
     margin-right: 15px;
-    font-size: 20px;
 }
-
-#compartilhar {
-    font-size: 20px;
-}
-
-#comentar:hover,
-#compartilhar:hover {
-    cursor: pointer;
-}
-
 .liked {
     color: red;
 }
@@ -148,7 +148,7 @@ iframe {
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     left: 0;
     top: 0;
     width: 100%;
@@ -162,10 +162,9 @@ iframe {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 300px; /* Ajusta a largura do modal */
+    width: 300px;
     border-radius: 10px;
     text-align: center;
-    
 }
 
 .close {
@@ -176,12 +175,12 @@ iframe {
     cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
 }
-#authorCard{
+
+#authorCard {
     z-index: 3;
 }
 
@@ -198,9 +197,11 @@ iframe {
 .author-info div {
     flex: 1;
 }
-#shareCard{
+
+#shareCard {
     z-index: 3;
 }
+
 #shareLink {
     width: 100%;
     padding: 10px;
@@ -218,35 +219,15 @@ iframe {
 .comentarios h3 {
     margin-bottom: 15px;
 }
-/* Mantém o card de vídeos à frente do card de comentários */
-.container-videos {
-    z-index: 2;
-}
-
-.container-comentario {
-    transform: translateX(32%); /* Move o card de comentários para a direita */
-}
-
-.container-videos.active {
-    z-index: 5;
-}
-
-.container-comentario.active {
- /* Mantém o card de comentários atrás do card de vídeos */
-    transform: translateX(146%);
-    z-index: 4;
-
-}
-
 
 #commentSectionContainer {
     flex: 1;
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    overflow-y: auto;
     margin-bottom: 10px;
 }
 
 #commentSection {
-    padding-right: 10px; /* Para evitar que o texto fique atrás da barra de rolagem */
+    padding-right: 10px;
 }
 
 .comment {
@@ -254,7 +235,7 @@ iframe {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    word-wrap: break-word; /* Quebra palavras longas */
+    word-wrap: break-word;
 }
 
 #commentForm {

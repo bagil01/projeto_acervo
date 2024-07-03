@@ -12,10 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
+    background-color: #fff;
+    
 }
 .content {
-    background-color: #fff;
     border-radius: 15px;
     width: 960px;
     height: 65%;
@@ -26,7 +26,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: green;
+    background-image: url('../midias/AfricanArtConcepts\ -\ Etsy.jpeg');
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;

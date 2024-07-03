@@ -30,90 +30,59 @@ function closeAuthorCard() {
     document.getElementById('authorCard').style.display = 'none';
 }
 
-/**
- * Função para alternar o like
- * @param {HTMLElement} likeIcon - Ícone de like
- */
-function toggleLike(likeIcon) {
-    const likeCount = document.getElementById('likeCount');
-    let count = parseInt(likeCount.innerText);
-
-    if (likeIcon.classList.contains('liked')) {
-        likeIcon.classList.remove('liked');
-        likeCount.innerText = --count;
+function toggleCommentSection(containerId) {
+    const commentContainer = document.getElementById(containerId);
+    if (commentContainer.classList.contains('active')) {
+        commentContainer.classList.remove('active');
     } else {
-        likeIcon.classList.add('liked');
-        likeCount.innerText = ++count;
+        commentContainer.classList.add('active');
     }
 }
 
-/**
- * Função para exibir o card de compartilhamento
- * @param {string} videoId - ID do vídeo
- */
+function submitComment(event, containerId) {
+    event.preventDefault();
+    const commentContainer = document.getElementById(containerId);
+    const input = commentContainer.querySelector('.commentInput');
+    const commentSection = commentContainer.querySelector('.commentSection');
+    const commentCount = commentContainer.querySelector('.commentCount');
+
+    const newComment = document.createElement('div');
+    newComment.classList.add('comment');
+    newComment.textContent = input.value;
+
+    commentSection.appendChild(newComment);
+    input.value = '';
+
+    commentCount.textContent = parseInt(commentCount.textContent) + 1;
+}
+
+function toggleLike(icon) {
+    if (icon.classList.contains('liked')) {
+        icon.classList.remove('liked');
+        icon.nextElementSibling.textContent = parseInt(icon.nextElementSibling.textContent) - 1;
+    } else {
+        icon.classList.add('liked');
+        icon.nextElementSibling.textContent = parseInt(icon.nextElementSibling.textContent) + 1;
+    }
+}
+
 function showShareCard(videoId) {
-    const videoUrl = document.getElementById(videoId).src;
-    document.getElementById('shareLink').value = videoUrl;
-    document.getElementById('shareCard').style.display = 'flex';
+    const shareCard = document.getElementById('shareCard');
+    const shareLink = document.getElementById('shareLink');
+    const video = document.getElementById(videoId);
+    shareLink.value = video.src;
+
+    shareCard.style.display = "flex";
 }
 
-/**
- * Função para fechar o card de compartilhamento
- */
+
 function closeShareCard() {
-    document.getElementById('shareCard').style.display = 'none';
+    document.getElementById('shareCard').style.display = "none";
 }
 
-/**
- * Função para copiar o link do vídeo para a área de transferência
- */
 function copyToClipboard() {
-    const copyText = document.getElementById('shareLink');
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // Para dispositivos móveis
+    const shareLink = document.getElementById('shareLink');
+    shareLink.select();
     document.execCommand('copy');
-    alert('Link copiado: ' + copyText.value);
-}
-
-/**
- * Função para alternar a exibição do card de comentários
- */
-document.getElementById('comentar').addEventListener('click', function() {
-    var comentarioCard = document.querySelector('.container-comentario');
-    comentarioCard.classList.toggle('active');
-});
-
-document.getElementById('comentar').addEventListener('click', function() {
-    var comentarioCard = document.querySelector('.container-videos');
-    comentarioCard.classList.toggle('active');
-});
-
-
-/**
- * Função para enviar um comentário
- * @param {Event} event - Evento de envio do formulário
- */
-function submitComment(event) {
-    event.preventDefault(); // Previne o envio do formulário
-
-    const commentInput = document.getElementById('commentInput');
-    const commentText = commentInput.value.trim();
-    if (commentText !== '') {
-        const commentSection = document.getElementById('commentSection');
-        const newComment = document.createElement('div');
-        newComment.classList.add('comment');
-        newComment.textContent = commentText;
-        commentSection.appendChild(newComment);
-        commentInput.value = ''; // Limpa o campo de entrada
-
-        updateCommentCount(); // Atualiza a contagem de comentários
-    }
-}
-
-/**
- * Função para atualizar a contagem de comentários
- */
-function updateCommentCount() {
-    const commentCount = document.getElementById('commentSection').children.length;
-    document.getElementById('commentCount').innerText = commentCount;
+    alert('Link copiado para a área de transferência');
 }
