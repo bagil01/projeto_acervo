@@ -39,7 +39,7 @@ body {
 .video-container.active {
     background-color: transparent;
     z-index: 10;
-    transform: scale(1.2);
+    transform: scale(1.5);
     transform: translateX(-35%);
 }
 
@@ -174,7 +174,7 @@ iframe {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ff0000;
+    border: 1px solid #000000;
     width: 300px;
     border-radius: 10px;
     text-align: center;
@@ -212,7 +212,7 @@ iframe {
 }
 
 #shareCard {
-    z-index: 3;
+    z-index: 12;
 }
 
 #shareLink {
@@ -230,6 +230,12 @@ iframe {
     flex-direction: column;
     height: 100%;
     position: relative;
+}
+.inactive {
+    pointer-events: none;
+    transition: 1s;
+    opacity: 0.1;
+    
 }
 
 .cont {

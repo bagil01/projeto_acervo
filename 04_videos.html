@@ -16,20 +16,20 @@
             <a class="logo" href="02_principal.html">ADCQ</a>
             <h1 class="textoPrincipal">ACERVO DIGITAL DE CULTURA QUILOMBOLA</h1>
         </div>
-    <nav class="menu">
-        <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-            <li><a href="03_descrição.html">Início</a></li>
-            <li><a href="04_videos.html">videos</a></li>
-            <li><a href="05_fotos.html">Fotos</a></li>
-            <li><a href="08_diretoria.html">Diretoria</a></li>
-            <li><a href="#">Homenagem</a></li>
-        </ul>
-    </nav>
+        <nav class="menu">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="03_descrição.html">Início</a></li>
+                <li><a href="04_videos.html">videos</a></li>
+                <li><a href="05_fotos.html">Fotos</a></li>
+                <li><a href="08_diretoria.html">Diretoria</a></li>
+                <li><a href="#">Homenagem</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
         <div class="container-conteudo">
@@ -42,8 +42,7 @@
                             <img src="midias/imagem-perfil.jpg" alt="Autor 1" onclick="toggleAuthorModal('authorCard')">
                             <p>Autor 1</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit.
-                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit.</p>
                         <div class="incons">
                             <i class="fas fa-heart" onclick="toggleLike(this)"></i>
                             <span class="likeCount">0</span>
@@ -112,7 +111,7 @@
                             <img src="midias/imagem-perfil.jpg" alt="Autor 3" onclick="toggleAuthorModal('authorCard')">
                             <p>Autor 3</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit. </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit.</p>
                         <div class="incons">
                             <i class="fas fa-heart" onclick="toggleLike(this)"></i>
                             <span class="likeCount">0</span>
@@ -137,15 +136,14 @@
                 </div>
             </div>
 
-            
             <div class="video-container">
                 <div class="container-videos">
-                    <iframe src="https://drive.google.com/file/d/18FYrUrOk-kaqL7pomEZf9XQECp2pO6DK/preview" width="640" height="480" ></iframe>
+                    <iframe src="https://drive.google.com/file/d/18FYrUrOk-kaqL7pomEZf9XQECp2pO6DK/preview" width="640" height="480"></iframe>
                     <div class="txt">
-                        <h2>Título do Vídeo 3</h2>
+                        <h2>Título do Vídeo 4</h2>
                         <div class="autor">
                             <img src="midias/imagem-perfil.jpg" alt="Autor 4" onclick="toggleAuthorModal('authorCard')">
-                            <p>Autor 3</p>
+                            <p>Autor 4</p>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit.</p>
                         <div class="incons">
@@ -172,26 +170,60 @@
                 </div>
             </div>
 
+            <div class="video-container">
+                <div class="container-videos">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PpD2tBBYHA8?si=1YZChYUZSiD5mDmb"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="txt">
+                        <h2>Título do Vídeo 5</h2>
+                        <div class="autor">
+                            <img src="midias/imagem-perfil.jpg" alt="Autor 5" onclick="toggleAuthorModal('authorCard')">
+                            <p>Autor 5</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor enim accusantium laudantium dignissimos hic magnam sit tempora, fugit dicta a, quibusdam quae! Cumque sapiente debitis dolorum recusandae totam suscipit.</p>
+                        <div class="incons">
+                            <i class="fas fa-heart" onclick="toggleLike(this)"></i>
+                            <span class="likeCount">0</span>
+                            <i class="fa-regular  fa-comment" onclick="toggleCommentSection('commentContainer5')"></i>
+                            <i class="fas fa-share" onclick="toggleShareModal('shareCard')"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="commentContainer5" class="container-comentario">
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div id="commentSectionContainer">
+                            <div id="commentSection5">
+                                <!-- Seção de comentários -->
+                            </div>
+                        </div>
+                        <form id="commentForm5">
+                            <input class="commentInput" type="text" placeholder="Digite seu comentário">
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+    <footer>
+        <div class="footer">
+            <p>informações e direitos reservados</p>
+        </div>
+    </footer>
 
     <div id="authorCard" class="modal">
         <div class="modal-content">
             <span class="close" onclick="toggleAuthorModal('authorCard')">&times;</span>
-            <div class="author-info">
-                <img src="autor1.jpg" alt="Autor 1">
-                <div>
-                    <h2>Autor 1</h2>
-                    <p>Biografia do autor 1</p>
-                </div>
-            </div>
+            <h2>Nome do Autor</h2>
+            <p>Descrição do autor</p>
         </div>
     </div>
-
     <div id="shareCard" class="modal">
         <div class="modal-content">
             <span class="close" onclick="toggleShareModal('shareCard')">&times;</span>
-            <input id="shareLink" type="text" value="URL do vídeo" readonly>
+            <h2>Compartilhar</h2>
+            <p>Opções de compartilhamento</p>
         </div>
     </div>
 
