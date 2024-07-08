@@ -1,88 +1,59 @@
-/**
- * Função para exibir o card do autor
- * @param {string} authorId - ID do autor
- */
-function showAuthorCard(authorId) {
-    const authors = {
-        'autor1': {
-            image: 'midias/imagem-perfil.jpg',
-            name: 'Nome do Autor',
-            age: 'XX',
-            location: 'Localização'
-        },
-    };
-
-    const author = authors[authorId];
-    if (author) {
-        document.getElementById('authorImage').src = author.image;
-        document.getElementById('authorName').innerText = author.name;
-        document.getElementById('authorAge').innerText = `Idade: ${author.age}`;
-        document.getElementById('authorLocation').innerText = `Morador de: ${author.location}`;
-
-        document.getElementById('authorCard').style.display = 'flex';
-    }
-}
-
-/**
- * Função para fechar o card do autor
- */
-function closeAuthorCard() {
-    document.getElementById('authorCard').style.display = 'none';
-}
-
+// Função para alternar a seção de comentários
 function toggleCommentSection(containerId) {
     const commentContainer = document.getElementById(containerId);
+    const videoContainer = commentContainer.closest('.video-container');
+
     if (commentContainer.classList.contains('active')) {
         commentContainer.classList.remove('active');
+        videoContainer.classList.remove('active');
     } else {
+        // Remove a classe 'active' de todos os outros containers
+        document.querySelectorAll('.video-container').forEach(vc => vc.classList.remove('active'));
+        document.querySelectorAll('.container-comentario').forEach(cc => cc.classList.remove('active'));
+
         commentContainer.classList.add('active');
+        videoContainer.classList.add('active');
     }
 }
 
-function submitComment(event, containerId) {
-    event.preventDefault();
-    const commentContainer = document.getElementById(containerId);
-    const input = commentContainer.querySelector('.commentInput');
-    const commentSection = commentContainer.querySelector('.commentSection');
-    const commentCount = commentContainer.querySelector('.commentCount');
-
-    const newComment = document.createElement('div');
-    newComment.classList.add('comment');
-    newComment.textContent = input.value;
-
-    commentSection.appendChild(newComment);
-    input.value = '';
-
-    commentCount.textContent = parseInt(commentCount.textContent) + 1;
+// Função para alternar o botão de curtida
+function toggleLike(element) {
+    element.classList.toggle('liked');
+    const likeCountElement = element.nextElementSibling;
+    let likeCount = parseInt(likeCountElement.textContent);
+    likeCount = element.classList.contains('liked') ? likeCount + 1 : likeCount - 1;
+    likeCountElement.textContent = likeCount;
 }
 
-function toggleLike(icon) {
-    if (icon.classList.contains('liked')) {
-        icon.classList.remove('liked');
-        icon.nextElementSibling.textContent = parseInt(icon.nextElementSibling.textContent) - 1;
-    } else {
-        icon.classList.add('liked');
-        icon.nextElementSibling.textContent = parseInt(icon.nextElementSibling.textContent) + 1;
-    }
+// Função para alternar o modal do autor
+function toggleAuthorModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
 }
 
-function showShareCard(videoId) {
-    const shareCard = document.getElementById('shareCard');
-    const shareLink = document.getElementById('shareLink');
-    const video = document.getElementById(videoId);
-    shareLink.value = video.src;
-
-    shareCard.style.display = "flex";
+// Função para alternar o modal de compartilhamento
+function toggleShareModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
 }
 
-
-function closeShareCard() {
-    document.getElementById('shareCard').style.display = "none";
+// Função para enviar comentário
+function setupCommentForms() {
+    const forms = document.querySelectorAll('form');
+    forms.forEach((form, index) => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const commentInput = this.querySelector('.commentInput');
+            const commentSectionId = `commentSection${index + 1}`;
+            const commentSection = document.getElementById(commentSectionId);
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment');
+            newComment.textContent = commentInput.value;
+            commentSection.appendChild(newComment);
+            commentInput.value = '';
+        });
+    });
 }
 
-function copyToClipboard() {
-    const shareLink = document.getElementById('shareLink');
-    shareLink.select();
-    document.execCommand('copy');
-    alert('Link copiado para a área de transferência');
-}
+// Inicializar a configuração dos formulários de comentário
+setupCommentForms();

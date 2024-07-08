@@ -136,6 +136,17 @@ nav {
   body {
     overflow-x: hidden;
   }
+  .textoPrincipal {
+    font-family: 'Cartoon-Blocks', Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    display: inline-block; /* Ajusta a largura ao conteúdo do texto */
+    color: #000000;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    z-index: 2;
+    text-align: center;
+    letter-spacing: .5px;
+  }
+  
   .nav-list {
     display: none;
     position: absolute;

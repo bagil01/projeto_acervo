@@ -29,7 +29,7 @@ window.onclick = function(event) {
 }
 
 function showImageModal(imageElement, index) {
-    images = imageElement.parentElement.getElementsByTagName('img');
+    images = imageElement.parentElement.getElementsByTagName('img','inframe');
     currentImageIndex = index;
     var modal = document.getElementById('imageModal');
     var modalImg = document.getElementById('imageModalContent');
