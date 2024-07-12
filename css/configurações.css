@@ -1,70 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     display: flex;
     width: 70%;
     justify-content: space-between;
     align-items: center;
-    
 }
-.container-configurações{
+.container-configurações {
     display: block;
     width: 300px;
     justify-content: left;
     align-content: center;
-    margin:25px;
+    margin: 25px;
     background-color: white;
-    border: .5px solid rgb(221, 221, 221);
+    border: 0.5px solid rgb(221, 221, 221);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.319);
     border-radius: 10px;
     margin-top: 10px;
 }
-.container-conteudo{
+.container-conteudo {
     display: block;
     justify-content: center;
     width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius:10px ;
+    border-radius: 10px;
     margin-bottom: 10px;
     background-color: white;
     margin-left: 10px;
 }
-.txt-titulo{
+.txt-titulo {
     text-align: center;
     margin-bottom: 10px;
 }
 
-.container-iformacao{
+.container-iformacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 40px;
-    border-top: 1px solid  rgb(221, 221, 221);
+    border-top: 1px solid rgb(221, 221, 221);
     font-size: 10px;
 }
-.container-iformacao:hover{
+.container-iformacao:hover {
     cursor: pointer;
     background-color: rgb(177, 177, 177);
     color: rgb(82, 82, 82);
 }
-h2{
+h2 {
     margin-left: 10px;
     margin-right: 10px;
 }
-#primeiro{
+#primeiro {
     border: none;
 }
-#primeiro:hover{
+#primeiro:hover {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-#ultimo:hover{
+#ultimo:hover {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
