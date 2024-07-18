@@ -47,9 +47,11 @@
     font-size: 18px;
     color: #333;
 }
+
 .profile-info p {
     text-align: justify;
 }
+
 .profile-bio {
     font-size: 14px;
     color: #555;
@@ -97,8 +99,8 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
 }
@@ -183,6 +185,7 @@
     cursor: pointer;
     font-size: 14px;
 }
+
 .form-senha label,
 .form-nome label,
 .form-foto label,
@@ -197,18 +200,21 @@
 
 .form-senha input,
 .form-nome input,
-.form-sobre textarea{
+.form-sobre textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-.form-nome p, .form-sobre p{
+
+.form-nome p,
+.form-sobre p {
     color: red;
     font-size: 15px;
     margin-top: 15px;
 }
+
 #concluir,
 #concluir-nome,
 #concluir-foto,
@@ -230,7 +236,7 @@
 #concluir-foto:hover,
 #concluir-sobre:hover,
 #concluir-senha:hover {
-    background-color: #113a02;
+    color: rgb(82, 82, 82);
     transition: .5s;
 }
 
