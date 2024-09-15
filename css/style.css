@@ -66,8 +66,8 @@ body {
 
 @media screen and (max-width:999px) {
   button.neumorphic {
-    width: 9rem; /* Defina a largura desejada */
-    height: 8rem; /* Defina a altura desejada */
+    width: 8.5rem; /* Defina a largura desejada */
+    height: 7.5rem; /* Defina a altura desejada */
     border: 0.6rem solid rgb(255, 255, 255);
     border-radius: 1rem;
     color: hsl(0 0% 10%);
@@ -108,7 +108,7 @@ body {
     }
     > span {
       font-family: system-ui, sans-serif;
-      font-size: 1rem; /* Ajuste o tamanho do texto */
+      font-size: .8rem; /* Ajuste o tamanho do texto */
     }
   }
   
@@ -120,8 +120,8 @@ body {
     display: grid;
     width: min(75rem, 100%);
     margin-inline: auto;
-    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); /* Aumente min(8rem, 100%) para min(10rem, 100%) */
+    grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr)); /* Aumente min(8rem, 100%) para min(10rem, 100%) */
     align-items: center;
-    gap: 2rem ; /* Ajuste o espaçamento entre os botões */
+    gap: 1.5rem ; /* Ajuste o espaçamento entre os botões */
   }
 }
