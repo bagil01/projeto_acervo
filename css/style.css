@@ -85,7 +85,7 @@ body {
 
   .buttons {
     grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 
@@ -115,7 +115,7 @@ body {
     gap: 1.5rem;
   }
 }
-/* Ajustes para telas menores que 600px (Smartphones) */
+/* Ajustes para telas menores que 400px (Smartphones) */
 @media screen and (max-width: 400px) {
   button.neumorphic {
     width: 8.5rem;
