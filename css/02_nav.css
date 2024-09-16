@@ -87,19 +87,22 @@ body {
 
 nav {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #000000;
   height: 9vh;
+  width: 100%;
   margin-bottom: 40px;
   padding: 0 20px;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* Espaçamento uniforme entre os itens */
   align-items: center;
+  gap: 20px; /* Define o espaçamento entre os itens */
+  padding: 0;
 }
 
 .nav-list li {
@@ -203,7 +206,21 @@ nav {
     text-align: center;
     margin: 0 auto;
   }
-
+  .nav-mobile-list {
+    display: none;
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    width: 35%;
+    height: 43vh;
+    background: #000000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in;
+    z-index: 2;
+    
+  }
   .nav-list {
     display: none;
     position: absolute;
@@ -217,7 +234,7 @@ nav {
     justify-content: space-around;
     transition: transform 0.5s ease-in;
     z-index: 2;
-    margin-top: -42px;
+    
   }
 
   .nav-list li {
@@ -233,7 +250,9 @@ nav {
   display: flex;
   
 }
-
+.nav-list-normal.active{
+  display: none;
+}
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -245,3 +264,6 @@ nav {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
+
+
