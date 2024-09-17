@@ -215,7 +215,15 @@ nav {
   body {
     overflow-x: hidden;
   }
-
+      .logo{
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .icons-right li {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
   .fundo {
     flex-direction: row;
     justify-content: space-between;
