@@ -225,6 +225,8 @@ p {
 }
 /*fim modal de tela cheia*/
 
+
+
 @media screen and (max-width: 700px) {
     .container {
         display: grid;

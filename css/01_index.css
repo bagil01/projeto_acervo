@@ -24,12 +24,13 @@ body {
     align-items: center;
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 .content::before {
     content: "";
     position: absolute;
     background-image: url('../midias/AfricanArtConcepts\ -\ Etsy.jpeg');
-    width: 40%;
+    width: 50%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;

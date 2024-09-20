@@ -45,7 +45,7 @@ body {
   color: #000000;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -84,6 +84,13 @@ body {
 .icons-right a:hover {
   color: #95a5a6;
 }
+.fa-solid{
+  color:black;
+  font-size: 20px;
+}
+.fa-solid:hover{
+  color: #95a5a6;
+}
 
 nav {
   display: flex;
@@ -102,6 +109,7 @@ nav {
   align-items: center;
   width: 85%;
   margin: 0 0; 
+  list-style: none;
 }
 
 .nav-list-normal li{
@@ -161,11 +169,15 @@ nav {
   }
 
   .textoPrincipal {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     margin: 0 auto;
   }
-
+  .fa-solid{
+    color:black;
+    font-size: 15px;
+  }
+  
   .nav-list {
     display: none;
     position: absolute;
