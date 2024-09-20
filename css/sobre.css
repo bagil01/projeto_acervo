@@ -25,6 +25,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
 }
+#descrição-projeto{
+    text-align: center;
+}
 
 .projeto h1 {
     font-size: 1.6rem;

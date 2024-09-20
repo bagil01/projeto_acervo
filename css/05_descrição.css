@@ -16,7 +16,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+.titulo-descrição{
+    text-align: center;
+}
 .container-descricao,
 .container-contatos {
     margin: 0 auto; /* Centraliza os cards */
@@ -30,7 +32,13 @@ body {
     text-align: justify;
     margin-bottom: 3rem;
 }
-
+#text-endereco{
+    font-size: 18px;
+    text-align: justify;
+}
+#titulo-descrição{
+    text-align: center;
+}
 .container-descricao {
     margin-bottom: 10px;
 }
