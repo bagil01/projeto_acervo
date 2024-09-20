@@ -75,7 +75,7 @@ footer p {
 
 .rodapé-contato li:hover {
     border: rgb(21, 255, 0);
-    background-color: rgb(21, 255, 0);
+    background-color: rgb(120, 120, 120);
     color: rgb(255, 255, 255);
 }
 
@@ -88,7 +88,7 @@ footer p {
 }
 
 .rodapé-termosdeuso a:hover {
-    color: #fe0000;
+    color: rgb(120, 120, 120);
 }
 
 .rodapé-contato:last-child, .rodapé-termosdeuso:last-child {
