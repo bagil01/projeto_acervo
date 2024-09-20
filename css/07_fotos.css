@@ -293,11 +293,11 @@ p {
 
 .image-modal .close {
     position: absolute;
-    right: 18px;
+    right: 10px;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
-    margin-top: 40%;
+    margin-top: 39%;
 }
 
 
