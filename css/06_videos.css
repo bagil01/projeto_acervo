@@ -1,3 +1,4 @@
+/* Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex: 1;
-    position: relative;
+    display: block;
 }
 
 .container-conteudo {
@@ -27,80 +18,31 @@ body {
     gap: 15px;
     justify-content: center;
     margin: 0 auto;
-    position: relative;
     margin-top: 30px;
 }
 
-.video-container {
-    position: relative;
-    transition: transform 0.3s, z-index 0.3s, box-shadow 0.3s;
-}
-
-.video-container.active {
-    background-color: transparent;
-    z-index: 10;
-    transform: scale(1.5);
-    transform: translateX(-35%);
-}
-
+/* Estilos do Card de Vídeo */
 .container-videos {
     background: #fff;
     transition: transform 0.3s;
     width: 380px;
     height: 440px;
-    max-width: 500px;
-    z-index: 3;
-    position: relative;
+    z-index: 1;
     margin-bottom: 20px;
     margin-right: 20px;
+    position: relative;
 }
 
-.container-comentario {
-    display: flex;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 440px;
-    padding: 10px;
-    flex-direction: column;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
-    overflow-y: auto;
-}
-
-.container-comentario {
-    transform: translateX(-120%);
-}
-
-.container-comentario.active {
-    display: flex;
-    transform: translateX(-7%);
-    z-index: 2;
-}
-
-.container-videos video {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0;
-}
-
-iframe {
+.container-videos iframe {
     width: 100%;
     height: 220px;
     border: none;
-    display: block;
-    margin: 0;
 }
 
 .txt {
     padding: 15px;
     position: relative;
-    padding-bottom: 40px; /* Adiciona espaço extra no final para os ícones */
+    padding-bottom: 40px; /* Espaço extra para os ícones */
 }
 
 .txt h2 {
@@ -112,7 +54,7 @@ iframe {
     color: #666;
     margin-bottom: 5px;
     text-align: justify;
-    margin-right:10px ;
+    margin-right: 10px;
 }
 
 .autor {
@@ -131,10 +73,10 @@ iframe {
 .incons {
     display: flex;
     align-items: center;
-    position: absolute; /* Mantém os ícones no final do card */
-    bottom: 15px; /* Ajusta a posição inferior */
-    left: 15px; /* Ajusta a posição à esquerda */
-    width: calc(100% - 30px); /* Subtrai o padding lateral */
+    position: absolute; /* Ícones no final do card */
+    bottom: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
 }
 
 .incons i {
@@ -147,80 +89,48 @@ iframe {
     color: red;
 }
 
-.likeCount {
-    margin-left: -13px;
-    margin-right: 15px;
-}
-
-.liked {
-    color: red;
-}
-
-.modal {
-    display: none;
+/* Modal de Comentários e Vídeos */
+.comment-modal {
+    display: none; /* O modal permanece oculto inicialmente */
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
 }
 
-.modal-content {
-    background-color: #fefefe;
+.comment-modal-content {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
     margin: auto;
     padding: 20px;
-    border: 1px solid #000000;
-    width: 300px;
     border-radius: 10px;
-    text-align: center;
+    width: 70%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-}
-
-#authorCard {
-    z-index: 4;
-}
-
-.author-info {
+/* Card de Comentário */
+.container-comentario {
     display: flex;
-}
-
-.author-info img {
-    height: 100px;
-    width: 100px;
-    margin-right: 20px;
-}
-
-.author-info div {
-    flex: 1;
-}
-
-#shareCard {
-    z-index: 12;
-}
-
-#shareLink {
-    width: 100%;
+    flex-direction: column;
+    background: #fff;
+   
+    overflow-y: auto;
     padding: 10px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    position: relative;
+    width: 350px;
+    height: 440px;
+    padding: 10px;
+    z-index: 3;
+    overflow-y: auto;
+
 }
 
 .comentarios {
@@ -231,12 +141,22 @@ iframe {
     height: 100%;
     position: relative;
 }
-.inactive {
-    pointer-events: none;
-    transition: 1s;
-    opacity: 0.1;
-    
+/* Estilo do botão de fechar o modal */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000;
+    z-index: 6;
 }
+
+.close-modal:hover {
+    color: #ff0000;
+}
+
 
 .cont {
     display: flex;
@@ -251,7 +171,6 @@ iframe {
 
 .comentarios h3 {
     margin-bottom: 15px;
-    top: 0;
     background: #fff;
     padding-top: 15px;
 }
@@ -297,4 +216,11 @@ button[type="submit"] {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Transições para estado inativo */
+.inactive {
+    pointer-events: none;
+    transition: 1s;
+    opacity: 0.1;
 }
