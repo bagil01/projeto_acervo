@@ -23,39 +23,18 @@
                 <span>Nome do Autor 1</span>
             </div>
             <div class="incons">
-                <i class="fa fa-thumbs-up"></i><span class="likeCount">0</span>
+                <i class="fa-solid fa-heart" id="liked" onclick="toggleLike(this)"></i>
+                <span class="likeCount">0</span>
                 <i class="fa-regular fa-comment" onclick="toggleCommentModal('modalVideo1')"></i>
-                <!-- Ícone de comentário acima chama a função para abrir o modal -->
-            </div>
+                <i class="fa-solid fa-share"></i>
+            </div>            
         </div>
     </div>
-
-    <!-- Card do Vídeo 2 -->
-    <div class="container-videos">
-        <iframe src="https://www.youtube.com/embed/XqCHmU2A8l8?si=x6lzSQZb8SO8ByzS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-        <div class="txt">
-            <h2>Título do Vídeo 2</h2>
-            <p>Descrição do vídeo 2...</p>
-            <div class="autor">
-                <img src="AUTOR_IMAGEM_URL_2" alt="Autor 2">
-                <span>Nome do Autor 2</span>
-            </div>
-            <div class="incons">
-                <i class="fa-regular fa-heart" id="liked"></i><span class="likeCount">0</span>
-                <i class="fa fa-comment" onclick="toggleCommentModal('modalVideo2')"></i>
-                <!-- Ícone de comentário acima chama a função para abrir o modal -->
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <!-- Modal para Comentários e Vídeo 1 -->
 <div id="modalVideo1" class="comment-modal">
-    <div class="comment-modal-content">
-        <span class="close-modal" onclick="toggleCommentModal('modalVideo1')">&times;</span>
-        
+    <div class="comment-modal-content"> 
         <!-- Vídeo dentro do modal -->
         <div class="container-videos">
             <iframe src="https://www.youtube.com/embed/XqCHmU2A8l8?si=x6lzSQZb8SO8ByzS"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
@@ -67,6 +46,7 @@
         </div>
         <!-- Seção de Comentários -->
         <div class="container-comentario">
+            <span class="close-modal" onclick="toggleCommentModal('modalVideo1')">&times;</span>
             <div class="comentarios">
                 <h3>Comentários</h3>
                 <div id="commentSectionContainer">
@@ -82,39 +62,6 @@
         </div>
     </div>
 </div>
-
-<!-- Modal para Comentários e Vídeo 2 -->
-<div id="modalVideo2" class="comment-modal">
-    <div class="comment-modal-content">
-        <span class="close-modal" onclick="toggleCommentModal('modalVideo2')">&times;</span>
-        
-        <!-- Vídeo dentro do modal -->
-        <div class="container-videos">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/A6ZnMJ7HZM4?si=ooAI7iSRdSIXdBSn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="txt">
-                <h2>Título do Vídeo 2</h2>
-                <p>Descrição do vídeo 2...</p>
-            </div>
-        </div>
-        <!-- Seção de Comentários -->
-        <div class="container-comentario">
-            <div class="comentarios">
-                <h3>Comentários</h3>
-                <div id="commentSectionContainer">
-                    <div id="commentSection2">
-                        <!-- Comentários aparecerão aqui -->
-                    </div>
-                </div>
-                <form>
-                    <input type="text" class="commentInput" placeholder="Adicione um comentário...">
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
     <script src="javascript/videos.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
