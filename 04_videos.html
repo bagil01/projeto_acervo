@@ -13,24 +13,43 @@
 
     <!-- Card do Vídeo 1 -->
     <div class="container-videos">
-        <iframe src="https://www.youtube.com/embed/XqCHmU2A8l8?si=x6lzSQZb8SO8ByzS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
+        <iframe id="video1" src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe>   
         <div class="txt">
             <h2>Título do Vídeo 1</h2>
             <p>Descrição do vídeo 1...</p>
             <div class="autor">
-                <img src="AUTOR_IMAGEM_URL_1" alt="Autor 1">
+                <img src="midias/imagem-perfil.jpg" alt="Autor 1">
                 <span>Nome do Autor 1</span>
             </div>
             <div class="incons">
-                like
-                <i class="fa-solid fa-heart" id="liked" onclick="toggleLike(this)"></i>
+                <i class="fa-solid fa-heart" id="liked1" onclick="toggleLike(this)"></i>
                 <span class="likeCount">0</span>
                 <i class="fa-regular fa-comment" onclick="toggleCommentModal('modalVideo1')"></i>
                 <i class="fa-solid fa-share"></i>
             </div>            
         </div>
     </div>
+    <!-- Fim do Card do Vídeo 1 -->
+
+    <!-- Card do Vídeo 2 -->
+    <div class="container-videos">
+        <iframe id="video2" src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe>   
+        <div class="txt">
+            <h2>Título do Vídeo 2</h2>
+            <p>Descrição do vídeo 2...</p>
+            <div class="autor">
+                <img src="midias/imagem-perfil.jpg" alt="Autor 2">
+                <span>Nome do Autor 2</span>
+            </div>
+            <div class="incons">
+                <i class="fa-solid fa-heart" id="liked2" onclick="toggleLike(this)"></i>
+                <span class="likeCount">0</span>
+                <i class="fa-regular fa-comment" onclick="toggleCommentModal('modalVideo2')"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>            
+        </div>
+    </div>
+    <!-- Fim do Card do Vídeo 2 -->
 </div>
 
 <!-- Modal para Comentários e Vídeo 1 -->
@@ -38,8 +57,7 @@
     <div class="comment-modal-content"> 
         <!-- Vídeo dentro do modal -->
         <div class="container-videos">
-            <iframe src="https://www.youtube.com/embed/XqCHmU2A8l8?si=x6lzSQZb8SO8ByzS"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-            
+            <iframe id="modalVideo1Iframe" src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe>
             <div class="txt">
                 <h2>Título do Vídeo 1</h2>
                 <p>Descrição do vídeo 1...</p>
@@ -63,6 +81,40 @@
         </div>
     </div>
 </div>
-    <script src="javascript/videos.js"></script> <!-- Link para o arquivo JavaScript -->
+
+<!-- Modal para Comentários e Vídeo 2 -->
+<div id="modalVideo2" class="comment-modal">
+    <div class="comment-modal-content"> 
+        <!-- Vídeo dentro do modal -->
+        <div class="container-videos">
+            <iframe id="modalVideo2Iframe" src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360" fetchpriority="high"></iframe>
+            <div class="txt">
+                <h2>Título do Vídeo 2</h2>
+                <p>Descrição do vídeo 2...</p>
+            </div>
+        </div>
+        <!-- Seção de Comentários -->
+        <div class="container-comentario">
+            <span class="close-modal" onclick="toggleCommentModal('modalVideo2')">&times;</span>
+            <div class="comentarios">
+                <h3>Comentários</h3>
+                <div id="commentSectionContainer">
+                    <div id="commentSection2">
+                        <!-- Comentários aparecerão aqui -->
+                    </div>
+                </div>
+                <form>
+                    <input type="text" class="commentInput" placeholder="Adicione um comentário...">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="javascript/videos.js"></script> 
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- Link para o arquivo JavaScript -->
 </body>
 </html>

@@ -1,16 +1,52 @@
-// Função para alternar o modal de comentários e vídeo
+// Função para garantir que apenas um vídeo esteja tocando de cada vez
+function pauseOtherVideos(currentVideo) {
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        if (iframe !== currentVideo) {
+            const src = iframe.src;
+            iframe.src = ''; // Pausar o vídeo
+            iframe.src = src; // Reiniciar o vídeo em estado pausado
+        }
+    });
+}
+
+// Modificar a função toggleCommentModal para pausar e reproduzir vídeos conforme necessário
 function toggleCommentModal(modalId) {
-    // Fechar todos os modais abertos
+    // Fechar todos os modais abertos e pausar o vídeo dentro do modal
     const modals = document.querySelectorAll('.comment-modal');
     modals.forEach(modal => {
+        const videoInsideModal = modal.querySelector('iframe');
         if (modal.id !== modalId) {
             modal.style.display = 'none';  // Fecha todos os modais que não sejam o atual
+            if (videoInsideModal) {
+                const src = videoInsideModal.src;
+                videoInsideModal.src = ''; // Pausa o vídeo no modal
+                videoInsideModal.src = src; // Reinicia o vídeo pausado
+            }
         }
     });
 
     // Alternar o modal clicado (abre ou fecha)
     const modal = document.getElementById(modalId);
-    modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    const videoInsideModal = modal.querySelector('iframe');
+    const mainVideo = document.querySelector('.container-videos iframe'); // O vídeo fora do modal
+
+    // Abrir o modal e pausar o vídeo principal
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        if (videoInsideModal) {
+            const src = videoInsideModal.src;
+            videoInsideModal.src = ''; // Pausa o vídeo no modal
+            videoInsideModal.src = src; // Reinicia o vídeo pausado
+        }
+    } else {
+        modal.style.display = 'flex';
+        if (mainVideo) {
+            const src = mainVideo.src;
+            mainVideo.src = ''; // Pausa o vídeo fora do modal
+            mainVideo.src = src; // Reinicia o vídeo pausado
+        }
+    }
 }
 
 // Função para alternar o botão de curtida
@@ -49,3 +85,10 @@ function setupCommentForms() {
 
 // Inicializar a configuração dos formulários de comentário
 setupCommentForms();
+
+// Inicializar função para garantir que apenas um vídeo seja reproduzido por vez
+document.querySelectorAll('iframe').forEach(iframe => {
+    iframe.addEventListener('play', function() {
+        pauseOtherVideos(this);
+    });
+});
