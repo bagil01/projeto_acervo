@@ -80,18 +80,17 @@ body {
 }
 
 .incons i {
-    margin-right: 5px; /* Diminua a margem para ajustar a distância */
+    margin-right: 10px; /* Diminua a margem para ajustar a distância */
     font-size: 20px;
     cursor: pointer;
 }
 
 
 .incons span {
-    margin-right: 10px; /* Ajuste se necessário */
+    margin-right: 5px; /* Ajuste se necessário */
+    margin-left: -5px;
 }
-.fa-comment  {
-    margin-right: 10px;
-}
+
 .liked {
     color: red; /* Altera a cor do ícone quando curtido */
 }
