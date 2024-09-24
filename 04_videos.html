@@ -5,9 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeos com Comentários</title>
     <link rel="stylesheet" href="icons/fontawesome-free-6.5.2-web/css/all.css">
-    <link rel="stylesheet" href="css/06_videos.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="css/06_videos.css"> 
+    <link rel="stylesheet" href="css/02_nav.css">
+    <link rel="stylesheet" href="css/03_rodapé.css">
+    <!-- Link para o arquivo CSS -->
 </head>
 <body>
+    <header>
+        <div class="fundo">
+            <div class="links">
+                <div class="voltar">
+                    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i></a> 
+                    <a class="logo" href="02_principal.html">ADCQ</a>
+                </div>
+                <ul class="icons-right">
+                    <li><a href="09_perfil.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="010_configurações.html"><i class="fa-solid fa-gear"></i></a></li>
+                </ul>
+        </div>
+            <h1 class="textoPrincipal">COLETIVO DE ESTUDANTES </h1>
+        </div>
+        <nav class="menu">
+            <div class="menu-normal">
+                <ul class="nav-list-normal"></ul>
+                    <li><a href="03_descrição.html">Início</a></li>
+                    <li><a href="04_videos.html">videos</a></li>
+                    <li><a href="05_fotos.html">Fotos</a></li>
+                    <li><a href="08_diretoria.html">Diretoria</a></li>
+                    <li><a href="011_homenagem.html">Homenagem</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <ul class="nav-list">
+                    <li><a href="03_descrição.html">Início</a></li>
+                    <li><a href="04_videos.html">videos</a></li>
+                    <li><a href="05_fotos.html">Fotos</a></li>
+                    <li><a href="08_diretoria.html">Diretoria</a></li>
+                    <li><a href="011_homenagem.html">Homenagem</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 <!-- Container de Vídeos -->
 <div class="container-conteudo">
 
@@ -111,7 +152,27 @@
         </div>
     </div>
 </div>
-
+<footer class="rodapé">
+    <div class="rodapé rodapé-informacao">
+        <h2 class="logo-projeto">ADCQ</h2>
+        <p>&copy; 2024 ADCQ.</p>
+        <p>Todos os direitos reservados.</p>
+    </div>
+    <div class="rodapé rodapé-descrição">
+        <p class="descrição">Somos uma iniciativa estudantil e independente que busca preservar e espalhar os
+            saberes, histórias e vivências dos povos quilombolas de Santarém.</p>
+    </div>
+    <div class="rodapé rodapé-direita">
+        <div class="rodapé rodapé-contato">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i></i></a></li>
+        </div>
+        <div class="rodapé rodapé-termosdeuso">
+            <a href="#">Termos de Uso e Política de Privacidade</a>
+        </div>
+    </div>
+</footer>
 <script src="javascript/videos.js"></script> 
 <script src="https://www.youtube.com/iframe_api"></script>
 
