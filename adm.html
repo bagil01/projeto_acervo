@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principal-admin</title>
+
+    <link rel="stylesheet" href="css/02_nav.css" />
+    <link rel="stylesheet" href="adm.css">
+    <link rel="stylesheet" href="css/03_rodapé.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="fundo">
+            <div class="links">
+                <a class="logo" href="02_principal.html">ADCQ</a>
+                <ul class="icons-right">
+                    <li><a href="09_perfil.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="010_configurações.html"><i class="fa-solid fa-gear"></i></a></li>
+                </ul>
+            </div>
+            <h1 class="textoPrincipal">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
+        </div>
+        <nav class="menu">
+            <div class="menu-normal">
+                <ul class="nav-list-normal"></ul>
+                    <li><a href="02_principal.html">Início</a></li>
+                    <li><a href="07_sobre.html">Sobre</a></li>
+                    <li><a href="06_eventos.html">Eventos</a></li>
+                    <li><a href="#">Doe - los</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <ul class="nav-list">
+                    <li><a href="02_principal.html">Início</a></li>
+                    <li><a href="07_sobre.html">Sobre</a></li>
+                    <li><a href="06_eventos.html">Eventos</a></li>
+                    <li><a href="#">Doe - los</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="buttons">
+            <button class="neumorphic" id="addCommunityBtn">
+                <i class="fa-solid fa-plus"></i>
+                <span>Adicionar</span>
+            </button>
+
+            <button class="neumorphic">
+                <i class="fa-solid fa-ellipsis-vertical" id="openModalBtn"></i>
+                <img class="fotos-ceq" src="midias/logo_ceq.png" alt="logo">
+                <span>CEQ</span>
+            </button>
+            
+           
+    </main>
+
+    <!-- Modal -->
+    <div id="communityModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastro de Comunidade</h2>
+            <form id="communityForm">
+
+                <label for="logo">Adicionar a logo:</label>
+                <input type="file" name="logo" id="logo">
+
+                <label for="nome">Nome da Comunidade:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" name="localizacao" required>
+
+                <button type="submit" class="submit-btn">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+     <!-- Modal de Ações -->
+     <div id="actionModal" class="modal-action">
+        <div class="modal-content-action">
+            <span class="close-action">&times;</span>
+            <h3>Ações Disponíveis</h3>
+            <button class="action-btn" id="editBtn">Editar</button>
+            <button class="action-btn" id="deleteBtn">Excluir</button>
+        </div>
+    </div>
+
+            <!-- Modal de Exclusão -->
+        <div id="excluir-modal" class="modal-excluir">
+            <div class="modal-content-excluir">
+                <span class="close-action">&times;</span>
+                <h3>Excluir Comunidade</h3>
+                <p>Tem certeza de que deseja excluir permanentemente esta comunidade?</p>
+                <p>Esta ação não poderá ser revertida.</p>
+                <div class="modal-actions">
+                    <button class="cancel-btn" id="cancelBtn">Cancelar</button>
+                    <button class="action-btn" id="excBtn">Excluir</button>
+                </div>
+            </div>
+        </div>
+
+    
+    <script src="./javascript/nav.js"></script>
+    <script src="adm.js"></script>
+</body>
+</html>
