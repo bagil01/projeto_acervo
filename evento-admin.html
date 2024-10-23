@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos admin</title>
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="evento-admin.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="btn-adc" class="item-container">
+        <i class="fa-solid fa-plus"></i>
+        <p class="add-event-text">Adicione um evento</p>
+    </div>
+    
+    <div class="item-container">
+        <div class="img-container">
+            <img src="midias/Calourada - CEQ.png" alt="Event image">
+        </div>
+        <div class="body-container">
+            <div class="overlay"></div>
+            <div class="event-info">
+                <p class="title">RECEPÇÃO DE CALOUROS</p>
+                <div class="separator"></div>
+                <p class="info">coletivo de estudantes quilombolas - ceq</p>
+                <p class="price">Entrada: Grátis</p>
+                <div class="additional-info">
+                    <a href="https://maps.app.goo.gl/FyfS2Q3HHkB8GSQe8" target="_blank">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Universidade Federal do Oeste do Pará
+                        </p>
+                    </a>
+                    <p class="info">
+                        <i class="far fa-calendar-alt"></i>
+                        11 de agosto, 18:00 Hr
+                    </p>
+                    <p class="info description">
+                        Convidamos vocês a participar da calourada do CEQ, teremos música ao vivo, comidas típicas e cerveja gelada.
+                    </p>
+                    <p class="info description">
+                        Para mais informações entre em contato:
+                    </p>
+                    <p class="info">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        (93) 991641070
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal cadastro de eventos -->
+<div id="eventoModal" class="modal-evento">
+    <div class="modal-content-evento">
+        <span class="close">&times;</span>
+        <h2>Cadastro de evento</h2>
+        <form id="eventoForm">
+
+            <label for="logo">Adicionar a logo:</label>
+            <input type="file" name="logo" id="logo">
+
+            <label for="nome">Nome do evento:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <label for="localizacao">Localização:</label>
+            <input type="text" id="localizacao" name="localizacao" required>
+
+            <button type="submit" class="submit-btn">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<script src="evento-admin.js"></script>
+</body>
+</html>
