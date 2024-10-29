@@ -1,0 +1,82 @@
+#btn-adc {
+    display: flex;
+    flex-direction: column;   /* Coloca o ícone e o texto em coluna */
+    justify-content: center;  /* Centraliza verticalmente */
+    align-items: center;      /* Centraliza horizontalmente */
+    width: 380px;
+    height: 440px;
+    background-color: #fff;   /* Cor de fundo */
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15); /* Sombra */
+    
+}
+#btn-adc:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#btn-adc i {
+    font-size: 50px;          /* Aumenta o tamanho do ícone */
+    color: red;               /* Cor do ícone */
+    display: block;
+    text-align: center;
+}
+
+.add-event-text {
+    margin-top: 10px;         /* Espaço entre o ícone e o texto */
+    font-size: 14px;          /* Tamanho do texto */
+    color: #777;              /* Cor do texto */
+    text-align: center;
+}
+.modal-content-video {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    max-width: 700px; /* Limite de largura para telas maiores */
+}
+
+.modal-content-video form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.modal-content-video form label {
+    grid-column: span 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.modal-content-video form input[type="text"],
+.modal-content-video form input[type="url"],
+.modal-content-video form input[type="file"],
+.modal-content-video form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.modal-content-video form textarea {
+    grid-column: span 2; /* Descrição ocupa toda a linha */
+}
+
+.submit-btn {
+    grid-column: span 2; /* Botão ocupa toda a linha */
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
