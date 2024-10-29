@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eventos admin</title>
+    <title>Eventos Admin</title>
     <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
     <link rel="stylesheet" href="evento-admin.css">
 </head>
@@ -66,12 +66,29 @@
             <label for="nome">Nome do evento:</label>
             <input type="text" id="nome" name="nome" required>
 
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+            <label for="responsavel">Responsável:</label>
+            <textarea id="responsavel" name="responsavel" required></textarea>
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" placeholder="Ex: Grátis" required>
 
             <label for="localizacao">Localização:</label>
             <input type="text" id="localizacao" name="localizacao" required>
 
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+            <br>
+            <br>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="contato">Contato (WhatsApp):</label>
+            <input type="tel" id="contato" name="contato" placeholder="(XX) XXXXX-XXXX" required>
+                <br>
+                <br>
             <button type="submit" class="submit-btn">Cadastrar</button>
         </form>
     </div>
