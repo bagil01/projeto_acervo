@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+}
 .profile-container {
     background-color: #fff;
     border-radius: 8px;
