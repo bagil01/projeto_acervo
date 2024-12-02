@@ -1,6 +1,7 @@
-body{
-background-color: #F0F0F0;
+body {
+    background-color: #F0F0F0;
 }
+
 /* Container principal */
 .container {
     display: grid;
@@ -19,38 +20,46 @@ background-color: #F0F0F0;
 /* Conteúdo principal */
 .container-conteudo {
     display: flex;
-    flex-direction: row; /* Alinha os elementos lado a lado */
-    flex-wrap: nowrap; /* Garante que não haverá quebra de linha */
+    flex-direction: row;
+    /* Alinha os elementos lado a lado */
+    flex-wrap: nowrap;
+    /* Garante que não haverá quebra de linha */
     gap: 20px;
 }
 
 /* Foto */
 .container-foto {
-    width: 40%; /* Reduz a largura para caber ao lado */
+    width: 40%;
+    /* Reduz a largura para caber ao lado */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .container-foto img {
     width: 100%;
-    max-width: 450px; /* Limita a largura da imagem */
+    max-width: 450px;
+    /* Limita a largura da imagem */
     border-radius: 10px;
     object-fit: cover;
 }
 
 /* Informações pessoais */
 .container-pessoais {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
+    /* Ocupa o espaço restante */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .container-pessoais h1 {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
     justify-content: center;
 }
+
 .container-pessoais h2 {
     font-size: 1.2em;
     color: #555;
@@ -61,9 +70,11 @@ background-color: #F0F0F0;
     margin-top: 20px;
     text-align: justify;
 }
-h1{
+
+h1 {
     justify-content: center;
 }
+
 /* Área de interação */
 .txt-incons {
     display: flex;
@@ -82,13 +93,16 @@ h1{
     cursor: pointer;
     transition: color 0.3s ease;
 }
+
 #curtir-incon:hover {
     color: #333;
 }
+
 .comentar {
     display: flex;
     align-items: center;
 }
+
 .comentar input {
     width: 220px;
     height: 35px;
@@ -97,9 +111,11 @@ h1{
     padding: 5px;
     outline: none;
 }
+
 .comentar input:focus {
     border-color: #666;
 }
+
 .btn-enviar {
     background-color: #007bff;
     color: #fff;
@@ -110,14 +126,17 @@ h1{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .btn-enviar:hover {
     background-color: #0056b3;
 }
+
 .ver-comentario {
     font-size: 0.9rem;
     color: #007bff;
     text-decoration: none;
 }
+
 .ver-comentario:hover {
     text-decoration: underline;
     color: #0056b3;
