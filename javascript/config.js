@@ -83,3 +83,11 @@ const send1Button = document.getElementById('send1');
 details1.addEventListener('input', () => {
     send1Button.disabled = details1.value.trim() === ''; // Desabilita o botão de envio se não houver texto
 });
+
+// Obter o botão
+document.getElementById('ver-perfil').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link (navegação automática)
+    
+    // Redireciona para a página principal
+    window.location.href = "09_perfil.html"; // Substitua "index.html" pelo URL desejado
+});
