@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,23 @@
     <link rel="stylesheet" href="css/02_nav.css">
     <link rel="stylesheet" href="icons/fontawesome-free-6.5.2-web/css/all.css">
     <link rel="stylesheet" href="css/configurações.css">
-
 </head>
+
 <body>
     <header>
         <div class="fundo">
             <div class="links">
                 <a class="logo" href="02_principal.html">ADCQ</a>
                 <ul class="icons-right">
-                    <li id="abrirModal"><a href="#" ><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="09_perfil.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li id="abrirModal"><a href="#"><i class="fa-solid fa-gear"></i></a></li>
                 </ul>
-        </div>
+            </div>
             <h1 class="textoPrincipal">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
         </div>
         <nav class="menu">
             <div class="menu-normal">
-                <ul class="nav-list-normal"></ul>
+                <ul class="nav-list-normal">
                     <li><a href="02_principal.html">Início</a></li>
                     <li><a href="07_sobre.html">Sobre</a></li>
                     <li><a href="06_eventos.html">Eventos</a></li>
@@ -43,7 +45,7 @@
         </nav>
     </header>
 
-
+    <!-- Modal Principal -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="container-config">
@@ -60,8 +62,8 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="opcao">
-                        <i class="fa-solid fa-gear"></i>
-                        <h4>Configurações e privacidade</h4>
+                        <i class="fa-solid fa-lock"></i>
+                        <h4>privacidade</h4>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="opcao">
@@ -86,12 +88,12 @@
             </div>
         </div>
     </div>
-    
 
+    <!-- Modal de Tela e Acessibilidade -->
     <div id="telaAcessibilidadeModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="voltar">
+                <button class="voltar" id="voltarTelaAcessibilidade">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
                 <h3>Tela e acessibilidade</h3>
@@ -103,9 +105,7 @@
                         <i class="fa-solid fa-moon"></i>
                         <h4>Modo escuro</h4>
                     </div>
-                    <p>
-                        Ajuste a aparência para reduzir o brilho e dar um descanso aos seus olhos.
-                    </p>
+                    <p>Ajuste a aparência para reduzir o brilho e dar um descanso aos seus olhos.</p>
                     <div class="radio-group">
                         <label>
                             <input type="radio" name="modo-escuro" value="desativado">
@@ -127,9 +127,7 @@
                         <i class="fa-solid fa-compress"></i>
                         <h4>Modo compacto</h4>
                     </div>
-                    <p>
-                        Deixe a fonte menor para que mais conteúdo caiba na tela.
-                    </p>
+                    <p>Deixe a fonte menor para que mais conteúdo caiba na tela.</p>
                     <div class="radio-group">
                         <label>
                             <input type="radio" name="modo-compacto" value="desativado" checked>
@@ -152,39 +150,58 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Modal de Ajuda e Suporte -->
-<div id="ajudaSuporteModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button class="voltar" id="voltarAjudaSuporte">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <h3>Ajuda e Suporte</h3>
-        </div>
-        <div class="modal-body">
-            <div class="config-section">
-                <div class="config-title">
-                    <i class="fa-solid fa-life-ring"></i>
-                    <h4>Central de Ajuda</h4>
-                </div>
+    <div id="ajudaSuporteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="voltar" id="voltarAjudaSuporte">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <h3>Ajuda e Suporte</h3>
             </div>
-            <div class="config-section">
-                <div class="config-title">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h4>Caixa de Entrada de Suporte</h4>
+            <div class="modal-body">
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-life-ring"></i>
+                        <h4>Central de Ajuda</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="config-section">
-                <div class="config-title">
-                    <i class="fa-solid fa-bug"></i>
-                    <h4>Relatar um Problema</h4>
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h4>Caixa de Entrada de Suporte</h4>
+                    </div>
+                </div>
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-bug"></i>
+                        <h4>Relatar um Problema</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="feedback-modal" id="feedbackModal">
+        <div class="escolher-area">
+            <h2>Ajude-nos a melhorar</h2>
+            <label for="area">Escolha uma área</label>
+            <select id="area">
+                <option value="feed">Feed</option>
+                <option value="mensagens">Mensagens</option>
+                <option value="perfil">Perfil</option>
+            </select>
+        </div>
+        <div class="detalhe">
+            <label for="details1">Detalhes</label>
+            <textarea id="details1" placeholder="Inclua o máximo de informações possível..."></textarea>
+        </div>
+        <button id="send1" disabled>Enviar</button>
+        <button id="voltarFeedbackModal">Voltar</button> <!-- Botão para voltar -->
+    </div>
 
     <script src="javascript/config.js"></script>
 </body>
+
 </html>
