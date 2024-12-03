@@ -87,6 +87,104 @@
         </div>
     </div>
     
+
+    <div id="telaAcessibilidadeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="voltar">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <h3>Tela e acessibilidade</h3>
+            </div>
+            <div class="modal-body">
+                <!-- Modo Escuro -->
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-moon"></i>
+                        <h4>Modo escuro</h4>
+                    </div>
+                    <p>
+                        Ajuste a aparência para reduzir o brilho e dar um descanso aos seus olhos.
+                    </p>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="modo-escuro" value="desativado">
+                            Desativado
+                        </label>
+                        <label>
+                            <input type="radio" name="modo-escuro" value="ativado" checked>
+                            Ativado
+                        </label>
+                        <label>
+                            <input type="radio" name="modo-escuro" value="automatico">
+                            Automático
+                        </label>
+                    </div>
+                </div>
+                <!-- Modo Compacto -->
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-compress"></i>
+                        <h4>Modo compacto</h4>
+                    </div>
+                    <p>
+                        Deixe a fonte menor para que mais conteúdo caiba na tela.
+                    </p>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="modo-compacto" value="desativado" checked>
+                            Desativado
+                        </label>
+                        <label>
+                            <input type="radio" name="modo-compacto" value="ativado">
+                            Ativado
+                        </label>
+                    </div>
+                </div>
+                <!-- Teclado -->
+                <div class="config-section">
+                    <div class="config-title">
+                        <i class="fa-solid fa-keyboard"></i>
+                        <h4>Teclado</h4>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Ajuda e Suporte -->
+<div id="ajudaSuporteModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="voltar" id="voltarAjudaSuporte">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <h3>Ajuda e Suporte</h3>
+        </div>
+        <div class="modal-body">
+            <div class="config-section">
+                <div class="config-title">
+                    <i class="fa-solid fa-life-ring"></i>
+                    <h4>Central de Ajuda</h4>
+                </div>
+            </div>
+            <div class="config-section">
+                <div class="config-title">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Caixa de Entrada de Suporte</h4>
+                </div>
+            </div>
+            <div class="config-section">
+                <div class="config-title">
+                    <i class="fa-solid fa-bug"></i>
+                    <h4>Relatar um Problema</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="javascript/config.js"></script>
 </body>
 </html>

@@ -99,3 +99,97 @@
     color: #e94560;
     font-weight: bold;
 }
+
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #3a3b3c;
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.voltar {
+    background: none;
+    border: none;
+    color: #e4e6eb;
+    cursor: pointer;
+}
+
+.voltar i {
+    font-size: 16px;
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.config-section {
+    margin-bottom: 20px;
+}
+
+.config-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    height: 20px;
+    
+}
+.config-title:hover{
+    background-color: #4e4f50;
+    cursor: pointer;
+    
+}
+.config-title h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.config-section p {
+    font-size: 12px;
+    color: #b0b3b8;
+    margin: 0 0 10px;
+}
+
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #e4e6eb;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    color: #1877f2;
+    font-weight: bold;
+}
+
+.config-title i {
+    font-size: 18px;
+    color: #e4e6eb;
+}
+
+.config-section:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #3a3b3c;
+}
+
+.config-section:last-child i {
+    font-size: 18px;
+}
+
