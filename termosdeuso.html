@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade e Termos de Uso</title>
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
     <link rel="stylesheet" href="css/termosdeuso.css"> <!-- Adicione o link do seu CSS -->
+    <style>
+   /* Adicionando um estilo para o botão de voltar */
+.back-to-home a {
+    cursor: pointer;
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remover o sublinhado do link */
+}
+
+.back-to-home a:hover {
+    color: #000000;
+}
+
+    </style>
 </head>
 <body>
     <div class="container">
         <!-- Mapa de navegação lateral -->
         <div class="sidebar">
+            <!-- Botão de voltar -->
+            <div class="back-to-home">
+                <a href="javascript:history.back()"><i class="fa-solid fa-chevron-left"></i></i><b>Voltar</b></a>
+            </div>
+
             <h2>Índice</h2>
             <ul>
                 <li><a href="#termos-uso">Termos de Uso</a></li>
@@ -124,5 +147,12 @@
             </section>
         </div>
     </div>
+
+    <script>
+        // Função para voltar ao topo da página
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
