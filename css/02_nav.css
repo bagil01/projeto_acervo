@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Cartoon-Blocks';
-  src: url('../fontes/from-cartoon-blocks/sketch-3d.regular.otf') format('truetype');
+  src: url('../fontes/sho-card-caps/Sho-CardCapsNF.otf') format('truetype');
 }
 
 * {
@@ -20,7 +20,7 @@ body {
   align-items: center;
   padding: 5px;
   background-color: rgb(255, 255, 255);
-  background-image: url(../midias/003.jpeg);
+  background-image: url(../midias/foto_teste_04.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,11 +29,26 @@ body {
 .textoPrincipal {
   font-family: 'Cartoon-Blocks', Geneva, Tahoma, sans-serif;
   font-size: 60px;
-  color: #000000;
+  color: rgb(255, 255, 255); /* Torna o texto transparente para exibir o fundo */
   text-align: center;
   letter-spacing: 0.5px;
   margin: 10px auto;
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-fill-color: white;
+  
 }
+.borda {
+  font-family: 'Cartoon-Blocks', Geneva, Tahoma, sans-serif;
+  font-size: 60px;
+  color: rgb(0, 0, 0); /* Torna o texto transparente para exibir o fundo */
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 10px ;
+  
+  margin-top: -150px;
+ 
+}
+
 .links{
   display: flex;
   justify-content: space-between;
