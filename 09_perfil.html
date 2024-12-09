@@ -7,12 +7,18 @@
     <title>Perfil de Usuário</title>
     <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" type="text/css" href="icons/fontawesome-free-6.5.2-web/css/all.min.css">
-    <link rel="stylesheet" href="css/configurações.css">
 </head>
 
 <body>
     <div class="container">
+        <!-- Link para "Início" no canto superior esquerdo -->
+        <div class="home-link">
+            <a href="02_principal.html">
+                <i class="fa-solid fa-house"></i> Início
+            </a>
+        </div>
 
+        <!-- Estrutura do perfil -->
         <div class="profile-container">
             <div class="profile-header">
                 <div class="foto">
@@ -36,8 +42,15 @@
                 <button class="delete-button">Excluir Conta</button>
             </div>
         </div>
+
+        
+        </div>
     </div>
-    </div>
+    <!-- Link para "Voltar" abaixo do card de perfil -->
+    <div class="back-link">
+        <a href="javascript:history.back()">
+            <i class="fa-solid fa-chevron-left"></i> Voltar para página anterior
+        </a>
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>

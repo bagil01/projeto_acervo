@@ -20,6 +20,7 @@
     width: 400px;
     text-align: center;
     padding: 20px;
+    margin-top: 3rem;
 }
 
 .profile-header {
@@ -255,4 +256,39 @@
 .form-sobre textarea {
     height: 100px;
     resize: none;
+}
+
+/* Estilo para o link de "Início" no canto superior esquerdo */
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+}
+
+.home-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.home-link a:hover {
+    color: #0056b3;
+}
+
+/* Estilo para o link "Voltar para página anterior" */
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color: #0056b3;
 }
