@@ -30,29 +30,32 @@ body {
 .textoPrincipal {
   font-family: 'Cartoon-Blocks', Geneva, Tahoma, sans-serif;
   font-size: 60px;
-  color: rgb(255, 255, 255); /* Torna o texto transparente para exibir o fundo */
+  color: rgb(255, 255, 255);
+  /* Torna o texto transparente para exibir o fundo */
   text-align: center;
   letter-spacing: 0.5px;
   margin: 10px auto;
   -webkit-text-stroke-width: 15px;
   -webkit-text-fill-color: white;
   font-size: 4.5rem;
-  
+
 }
+
 .borda {
   font-family: 'Cartoon-Blocks', Geneva, Tahoma, sans-serif;
   font-size: 60px;
-  color: rgb(0, 0, 0); /* Torna o texto transparente para exibir o fundo */
+  color: rgb(0, 0, 0);
+  /* Torna o texto transparente para exibir o fundo */
   text-align: center;
   letter-spacing: 0.5px;
-  margin: 10px ;
+  margin: 10px;
   margin-top: -175px;
   font-size: 4.5rem;
 
- 
+
 }
 
-.links{
+.links {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -115,16 +118,17 @@ nav {
   margin-bottom: 40px;
   padding: 0 20px;
 }
-.menu-normal{
+
+.menu-normal {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 85%;
-  margin: 0 0; 
+  margin: 0 0;
   list-style: none;
 }
 
-.nav-list-normal li{
+.nav-list-normal li {
   list-style: none;
 
 }
@@ -132,16 +136,18 @@ nav {
 
 .nav-list {
   display: flex;
-  justify-content: space-around; /* Espaçamento uniforme entre os itens */
+  justify-content: space-around;
+  /* Espaçamento uniforme entre os itens */
   align-items: center;
-  gap: 20px; /* Define o espaçamento entre os itens */
+  gap: 20px;
+  /* Define o espaçamento entre os itens */
   padding: 0;
 }
 
 .nav-list li {
   list-style: none;
   margin: 0 20px;
-  
+
 }
 
 .nav-list a {
@@ -150,10 +156,12 @@ nav {
   transition: color 0.3s;
   font-size: 18px;
 }
-.menu-normal a{
+
+.menu-normal a {
   text-decoration: none;
   color: rgb(16, 161, 0);
 }
+
 .nav-list a:hover {
   color: #95a5a6;
 }
@@ -186,11 +194,12 @@ nav {
     text-align: center;
     margin: 0 auto;
   }
-  .fa-solid{
-    color:black;
+
+  .fa-solid {
+    color: black;
     font-size: 15px;
   }
-  
+
   .nav-list {
     display: none;
     position: absolute;
@@ -214,7 +223,7 @@ nav {
   .menu-normal {
     display: none;
   }
-  
+
   .mobile-menu {
     display: block;
   }
@@ -222,7 +231,7 @@ nav {
 
 .nav-list.active {
   display: flex;
-  
+
 }
 
 .mobile-menu.active .line1 {
@@ -236,19 +245,23 @@ nav {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
 @media screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
   }
-      .logo{
+
+  .logo {
     margin-left: 5px;
     font-size: 15px;
   }
+
   .icons-right li {
     width: 25px;
     height: 25px;
     line-height: 25px;
   }
+
   .fundo {
     flex-direction: row;
     justify-content: space-between;
@@ -259,6 +272,7 @@ nav {
     text-align: center;
     margin: 0 auto;
   }
+
   .nav-mobile-list {
     display: none;
     position: absolute;
@@ -272,8 +286,9 @@ nav {
     justify-content: space-around;
     transition: transform 0.5s ease-in;
     z-index: 2;
-    
+
   }
+
   .nav-list {
     display: none;
     position: absolute;
@@ -297,7 +312,7 @@ nav {
   .menu-normal {
     display: none;
   }
-  
+
   .mobile-menu {
     display: block;
   }
@@ -306,7 +321,7 @@ nav {
 
 .nav-list.active {
   display: flex;
-  
+
 }
 
 .mobile-menu.active .line1 {
@@ -324,5 +339,3 @@ nav {
 
 
 /* Exibe o menu normal em telas grandes e esconde o menu mobile */
-
-

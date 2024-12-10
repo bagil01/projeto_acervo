@@ -1,96 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeos com Comentários</title>
     <link rel="stylesheet" href="../icons/fontawesome-free-6.5.2-web/css/all.css">
-    <link rel="stylesheet" href="../css/06_videos.css"> 
+    <link rel="stylesheet" href="../css/06_videos.css">
     <link rel="stylesheet" href="css/videos-admin.css">
 </head>
+
 <body>
 
-<!-- Container de Vídeos -->
-<div class="container-conteudo">
-    <div id="btn-adc" class="item-container">
-        <i class="fa-solid fa-plus"></i>
-        <p class="add-event-text">Adicione um vídeo</p>
-    </div>
-    
-    <!-- Card do Vídeo 1 -->
-    <div class="container-videos">
-        <iframe id="video1" src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen width="720" height="360"></iframe>   
-        <div class="txt">
-            <h2>Título do Vídeo 1</h2>
-            <p>Descrição do vídeo 1...</p>
-            <div class="autor">
-                <img src="midias/imagem-perfil.jpg" alt="Autor 1">
-                <span>Nome do Autor 1</span>
-            </div>
-            <div class="icons">
-                <i class="fa-solid fa-heart" id="liked1" onclick="toggleLike(this)"></i>
-                <span class="likeCount">0</span>
-                <i class="fa-regular fa-comment" onclick="toggleCommentModal('modalVideo1')"></i>
-                <i class="fa-solid fa-share"></i>
-            </div>            
+    <!-- Container de Vídeos -->
+    <div class="container-conteudo">
+        <div id="btn-adc" class="item-container">
+            <i class="fa-solid fa-plus"></i>
+            <p class="add-event-text">Adicione um vídeo</p>
         </div>
-    </div>
-</div>
 
-<!-- Modal para Comentários do Vídeo 1 -->
-<div id="modalVideo1" class="comment-modal">
-    <div class="comment-modal-content"> 
+        <!-- Card do Vídeo 1 -->
         <div class="container-videos">
-            <iframe src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1&iosFakeFullscreen=true" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen width="720" height="360"></iframe>
+            <iframe id="video1"
+                src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1"
+                style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                allowfullscreen width="720" height="360"></iframe>
             <div class="txt">
                 <h2>Título do Vídeo 1</h2>
                 <p>Descrição do vídeo 1...</p>
-            </div>
-        </div>
-        <div class="container-comentario">
-            <span class="close-modal" onclick="toggleCommentModal('modalVideo1')">&times;</span>
-            <div class="comentarios">
-                <h3>Comentários</h3>
-                <div id="commentSection1">
-                    <!-- Comentários aparecerão aqui -->
+                <div class="autor">
+                    <img src="midias/imagem-perfil.jpg" alt="Autor 1">
+                    <span>Nome do Autor 1</span>
                 </div>
-                <form>
-                    <input type="text" class="commentInput" placeholder="Adicione um comentário...">
-                    <button type="submit">Enviar</button>
-                </form>
+                <div class="icons">
+                    <i class="fa-solid fa-heart" id="liked1" onclick="toggleLike(this)"></i>
+                    <span class="likeCount">0</span>
+                    <i class="fa-regular fa-comment" onclick="toggleCommentModal('modalVideo1')"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Modal de Cadastro de Vídeos -->
-<div id="videoModal" class="modal-video">
-    <div class="modal-content-video">
-        <h2>Cadastro de Vídeo</h2>
-        <form id="videoForm">
-            <label for="titulo">Título do Vídeo:</label>
-            <input type="text" id="titulo" name="titulo" required>
-        
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" name="descricao" required></textarea>
-        
-            <label for="autor">Nome do Autor:</label>
-            <input type="text" id="autor" name="autor" required>
-        
-            <label for="imagemAutor">Imagem de Perfil do Autor:</label>
-            <input type="file" id="imagemAutor" name="imagemAutor" accept="image/*" required>
-        
-            <label for="linkVideo">Link do Vídeo:</label>
-            <input type="url" id="linkVideo" name="linkVideo" placeholder="https://exemplo.com" required>
-        
-            <button type="submit" class="submit-btn">Cadastrar</button>
-        </form>
-        
+    <!-- Modal para Comentários do Vídeo 1 -->
+    <div id="modalVideo1" class="comment-modal">
+        <div class="comment-modal-content">
+            <div class="container-videos">
+                <iframe
+                    src="https://player-vz-b13da030-b2b.tv.pandavideo.com.br/embed/?v=ec442cb4-bb58-400e-a226-902a590e2fa1&iosFakeFullscreen=true"
+                    style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                    allowfullscreen width="720" height="360"></iframe>
+                <div class="txt">
+                    <h2>Título do Vídeo 1</h2>
+                    <p>Descrição do vídeo 1...</p>
+                </div>
+            </div>
+            <div class="container-comentario">
+                <span class="close-modal" onclick="toggleCommentModal('modalVideo1')">&times;</span>
+                <div class="comentarios">
+                    <h3>Comentários</h3>
+                    <div id="commentSection1">
+                        <!-- Comentários aparecerão aqui -->
+                    </div>
+                    <form>
+                        <input type="text" class="commentInput" placeholder="Adicione um comentário...">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-<script src="../javascript/videos.js"></script>
-<script src="js/videos-admin.js"></script>
+    <!-- Modal de Cadastro de Vídeos -->
+    <div id="videoModal" class="modal-video">
+        <div class="modal-content-video">
+            <h2>Cadastro de Vídeo</h2>
+            <form id="videoForm">
+                <label for="titulo">Título do Vídeo:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <label for="autor">Nome do Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+
+                <label for="imagemAutor">Imagem de Perfil do Autor:</label>
+                <input type="file" id="imagemAutor" name="imagemAutor" accept="image/*" required>
+
+                <label for="linkVideo">Link do Vídeo:</label>
+                <input type="url" id="linkVideo" name="linkVideo" placeholder="https://exemplo.com" required>
+
+                <button type="submit" class="submit-btn">Cadastrar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="../javascript/videos.js"></script>
+    <script src="js/videos-admin.js"></script>
 
 </body>
+
 </html>
