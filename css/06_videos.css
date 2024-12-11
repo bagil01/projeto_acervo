@@ -331,7 +331,12 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-    
+.liked {
+    color: red;
+    /* Altera a cor do ícone quando curtido */
+
+}
+   
 }
 
 @media (max-width: 600px) {
@@ -402,6 +407,11 @@ button[type="submit"] {
     cursor: pointer;
 }
 
- 
+.liked {
+    color: red;
+    /* Altera a cor do ícone quando curtido */
+
+}
+
 
 }
