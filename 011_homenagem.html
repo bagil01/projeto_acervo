@@ -28,8 +28,8 @@
                     </ul>
                 </div>
                 <h1 class="textoPrincipal">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
-            <h1 class="borda">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
-        </div>
+                <h1 class="borda">ACERVO DIGITAL de <br> CULTURA QUILOMBOLA</h1>
+            </div>
             <nav class="menu">
                 <div class="menu-normal">
                     <ul class="nav-list-normal"></ul>
@@ -91,8 +91,30 @@
                 <a class="ver-comentario" href="#">ver comentários</a>
             </div>
         </div>
+        <!-- HTML para o Modal de Comentários -->
+        <div id="modal-comentarios" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Comentários</h2>
+                <div class="comentarios-lista">
+                    <!-- Comentários existentes serão listados aqui -->
+                    <div class="comentario">
+                        <p><strong>Usuário 1:</strong> Comentário interessante!</p>
+                    </div>
+                    <div class="comentario">
+                        <p><strong>Usuário 2:</strong> Muito inspirador!</p>
+                    </div>
+                    <!-- Adicione mais comentários dinamicamente -->
+                </div>
+                <div class="comentar-novo">
+                    <input type="text" placeholder="Adicione seu comentário..." id="novo-comentario">
+                    <button id="btn-enviar-comentario">Enviar</button>
+                </div>
+            </div>
+        </div>
 
         <script src="javascript/nav.js"></script>
+        <script src="javascript/homenage.js"></script>
 </body>
 
 </html>
