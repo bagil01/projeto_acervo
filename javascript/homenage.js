@@ -1,22 +1,11 @@
  // Abrir e fechar modal
- const modal = document.getElementById("modal-comentarios");
- const btnVerComentarios = document.querySelector(".ver-comentario");
- const btnFechar = document.querySelector(".close");
+ document.getElementById("icon-comentario").addEventListener("click", function () {
+    document.getElementById("modal-comentarios").style.display = "block";
+});
 
- btnVerComentarios.addEventListener("click", function (event) {
-     event.preventDefault();
-     modal.style.display = "block";
- });
-
- btnFechar.addEventListener("click", function () {
-     modal.style.display = "none";
- });
-
- window.addEventListener("click", function (event) {
-     if (event.target === modal) {
-         modal.style.display = "none";
-     }
- });
+document.querySelector(".modal .close").addEventListener("click", function () {
+    document.getElementById("modal-comentarios").style.display = "none";
+});
 
  // Adicionar novo comentário
  const btnEnviarComentario = document.getElementById("btn-enviar-comentario");
@@ -35,3 +24,13 @@
          inputComentario.value = "";
      }
  });
+
+
+ // Função para alternar o botão de curtida
+function toggleLike(element) {
+    element.classList.toggle('liked'); // Adiciona ou remove a classe 'liked' para alterar o estilo
+    const likeCountElement = element.nextElementSibling; // O próximo elemento span (contador de likes)
+    let likeCount = parseInt(likeCountElement.textContent); // Pega o número atual de likes
+    likeCount = element.classList.contains('liked') ? likeCount + 1 : likeCount - 1; // Adiciona ou remove 1
+    likeCountElement.textContent = likeCount; // Atualiza o contador
+}

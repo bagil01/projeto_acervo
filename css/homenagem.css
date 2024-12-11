@@ -20,14 +20,17 @@ body {
 /* Conteúdo principal */
 .container-conteudo {
     display: flex;
-    flex-direction: row; /* Alinha elementos lado a lado */
-    flex-wrap: nowrap; /* Garante que não haverá quebra de linha */
+    flex-direction: row;
+    /* Alinha elementos lado a lado */
+    flex-wrap: nowrap;
+    /* Garante que não haverá quebra de linha */
     gap: 20px;
 }
 
 /* Foto */
 .container-foto {
-    width: 40%; /* Reduz a largura para caber ao lado */
+    width: 40%;
+    /* Reduz a largura para caber ao lado */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,14 +38,16 @@ body {
 
 .container-foto img {
     width: 100%;
-    max-width: 450px; /* Limita a largura da imagem */
+    max-width: 450px;
+    /* Limita a largura da imagem */
     border-radius: 10px;
     object-fit: cover;
 }
 
 /* Informações pessoais */
 .container-pessoais {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
+    /* Ocupa o espaço restante */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -74,71 +79,27 @@ h1 {
 .txt-incons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     border-top: 1px solid #ddd;
     padding: 10px 0;
     margin-top: 20px;
 }
 
-/* Botões e ícones */
-#curtir-incon {
-    font-size: 1.5em;
-    color: #666;
+.fa-heart:before{
     cursor: pointer;
-    transition: color 0.3s ease;
+    margin-right: -12px;
+}
+.liked {
+    color: red;
+    /* Altera a cor do ícone quando curtido */
+
 }
 
-#curtir-incon:hover {
-    color: #333;
-}
-
-.comentar {
-    display: flex;
-    align-items: center;
-}
-
-.comentar input {
-    width: 220px;
-    height: 35px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    padding: 5px;
-    outline: none;
-}
-
-.comentar input:focus {
-    border-color: #666;
-}
-
-.btn-enviar {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    width: 60px;
-    height: 35px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-enviar:hover {
-    background-color: #0056b3;
-}
-
-.ver-comentario {
-    font-size: 0.9rem;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.ver-comentario:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
- /* Estilo do modal */
- .modal {
-    display: none; /* Oculto por padrão */
+/* Estilo do modal */
+.modal {
+    display: none;
+    /* Oculto por padrão */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -154,8 +115,8 @@ h1 {
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
+    width: 70%;
+    max-width: 400px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -201,7 +162,7 @@ h1 {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -222,18 +183,21 @@ h1 {
     }
 
     .container-foto img {
-        max-width: 350px; /* Reduz o tamanho da imagem em tablets */
+        max-width: 350px;
+        /* Reduz o tamanho da imagem em tablets */
     }
 }
 
 @media (max-width: 768px) {
     .container-conteudo {
-        flex-direction: column; /* Muda para coluna em dispositivos menores */
+        flex-direction: column;
+        /* Muda para coluna em dispositivos menores */
         align-items: center;
     }
 
     .container-foto {
-        width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+        width: 100%;
+        /* Ajusta a largura para ocupar o espaço disponível */
     }
 
     .container-foto img {
@@ -242,7 +206,8 @@ h1 {
     }
 
     .container-pessoais {
-        width: 100%; /* Garante que o conteúdo ocupa a largura total */
+        width: 100%;
+        /* Garante que o conteúdo ocupa a largura total */
     }
 }
 
@@ -257,7 +222,8 @@ h1 {
     }
 
     .container-pessoais h1 {
-        font-size: 1.5em; /* Ajusta o tamanho do texto */
+        font-size: 1.5em;
+        /* Ajusta o tamanho do texto */
     }
 
     .container-pessoais h2 {
@@ -265,20 +231,34 @@ h1 {
     }
 
     .container-bibiografia {
-        font-size: 0.9em; /* Reduz o tamanho da fonte */
+        font-size: 0.9em;
+        /* Reduz o tamanho da fonte */
     }
 
     .comentar input {
-        width: 150px; /* Reduz o campo de entrada em telas pequenas */
+        width: 150px;
+        /* Reduz o campo de entrada em telas pequenas */
         height: 30px;
     }
 
     .btn-enviar {
-        width: 50px; /* Reduz o tamanho do botão */
+        width: 50px;
+        /* Reduz o tamanho do botão */
         height: 30px;
     }
 
     #curtir-incon {
         font-size: 1.2em;
     }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
 }
