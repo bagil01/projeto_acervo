@@ -92,3 +92,24 @@ document.querySelectorAll('iframe').forEach(iframe => {
         pauseOtherVideos(this);
     });
 });
+// Função para abrir o modal de comentário no mobile
+function openMobileCommentModal() {
+    const modal = document.getElementById('mobileCommentModal');
+    modal.style.display = 'flex'; // Exibe o modal
+}
+
+// Função para fechar o modal de comentário no mobile
+function closeMobileCommentModal() {
+    const modal = document.getElementById('mobileCommentModal');
+    modal.style.display = 'none'; // Fecha o modal
+}
+
+// Exemplo de como abrir o modal ao clicar em um botão
+document.getElementById('openCommentButton').addEventListener('click', openMobileCommentModal);
+
+// Fechar o modal ao clicar fora do card de comentário
+document.getElementById('mobileCommentModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeMobileCommentModal();
+    }
+});
