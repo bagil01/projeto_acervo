@@ -29,7 +29,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-image: url('../midias/AfricanArtConcepts\ -\ Etsy.jpeg');
+    background-color: green;
     width: 50%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -506,12 +506,17 @@ input:-webkit-autofill
 }
 
 @media screen and (max-width: 740px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
     .form {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 425px) {
+  
     .form {
         width: 100%;
     }
