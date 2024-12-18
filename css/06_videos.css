@@ -31,7 +31,22 @@ body {
     margin-right: 20px;
     position: relative;
 }
+.container-videos-coment{
+    background: #ffffff;
+    transition: transform 0.3s;
+    width: 380px;
+    height: 440px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
 
+}
+
+.container-videos-coment iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+}
 .container-videos iframe {
     width: 100%;
     height: 220px;
@@ -242,38 +257,15 @@ button[type="submit"] {
     transition: 1s;
     opacity: 0.1;
 }
-/* Estilos do modal */
-.comment-modal {
-    display: none; /* Inicialmente escondido */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilos do card de comentário */
-.comment-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 
 @media (max-width: 999px) {
-    .container-videos {
-        background: #fff;
+    .container-videos-coment{
+        background: #4c2e2e;
         transition: transform 0.3s;
-        width: 400px;
-        height: 460px;
+        width: 100%;
+        height: 320px;
         margin-bottom: 20px;
-        margin-right: 0px;
+        margin-right: 20px;
         position: relative;
     }
 
@@ -285,7 +277,7 @@ button[type="submit"] {
     margin: auto;
     padding: 20px;
     border-radius: 10px;
-    width: 90%;
+    width: 80%;
     max-width: 900px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     justify-content: flex-start; /* Alinha o conteúdo no topo */
@@ -363,16 +355,57 @@ button[type="submit"] {
 }
 
 @media (max-width: 500px) {
+    /* Modal de Comentários e Vídeos */
+ .comment-modal-content {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+}
 
-    /* Estilos do Card de Vídeo */
-    .container-videos {
-        background: #fff;
+    .container-videos-coment{
+        background: #4c2e2e;
         transition: transform 0.3s;
-        width: 350px;
-        height: 440px;
+        width: 100%;
+        height: 220px;
         margin-bottom: 20px;
-        margin-right: 0px;
+        margin-right: 20px;
         position: relative;
+    }
+    .container-comentario {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 10px;
+        width: 100%;
+        max-height: 400px;
+        border-radius: 10px;
+        margin-bottom: 10px; /* Espaço entre o vídeo e os comentários */
+    }
+    .comentarios{
+    width: 100% ;
+    }
+    
+    .container-videos-coment iframe {
+        width: 100%;
+        height: 220px;
+        border: none;
+        justify-content: center;
+    }
+    .modal-content {
+        width: 95%; /* Maior aproveitamento da largura */
+        padding: 10px;
+    }
+
+    .video-item {
+        max-width: 100%; /* Ocupa toda a largura */
     }
 
 #commentSectionContainer {
@@ -400,6 +433,7 @@ form {
     background: #fff;
     z-index: 1;
     margin-top: 10px;
+    margin-left: -12px;
 }
 
 .commentInput {
@@ -416,44 +450,13 @@ button[type="submit"] {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 .liked {
     color: red;
     /* Altera a cor do ícone quando curtido */
-
-}
-.comment-modal {
-    display: flex; /* Mostra o modal apenas em dispositivos móveis */
 }
 
-/* Estilos do formulário */
-.comment-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.comment-card textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.comment-card button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.comment-card button:hover {
-    background-color: #0056b3;
-}
 
 }
