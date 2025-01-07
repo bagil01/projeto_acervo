@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #CECECE;
+    background-color: #ffffff;
     padding: 20px;
     display: block;
 }
@@ -30,6 +30,7 @@ body {
     margin-bottom: 20px;
     margin-right: 20px;
     position: relative;
+    box-shadow:10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .container-videos-coment{
     background: #ffffff;

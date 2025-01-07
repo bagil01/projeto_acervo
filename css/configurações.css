@@ -7,8 +7,8 @@
 }
 
 .modal-content {
-    background-color: #242526;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     width: 250px; /* Ajuste o tamanho conforme necessário */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@
 }
 
 .fechar:hover {
-    color: white;
+    color: rgb(255, 0, 0);
 }
 
 .perfil {
@@ -40,7 +40,7 @@
 .perfil i {
     font-size: 50px;
     margin-bottom: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .perfil h3 {
@@ -48,16 +48,17 @@
 }
 
 .ver-perfis {
-    background-color: #3a3b3c;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.ver-perfis:hover {
-    background-color: #4e4f50;
+.ver-perfis:hover,.opcao:hover {
+    background-color: #ededed;
 }
 
 .container-opcoes {
@@ -70,15 +71,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3a3b3c;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.opcao:hover {
-    background-color: #4e4f50;
-}
+ 
 
 .opcao i {
     font-size: 18px;

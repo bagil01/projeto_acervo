@@ -8,114 +8,147 @@
 
 body {
     font-family: 'Lora', serif;
-    background-color: #e5e9f4;
+    background-color: #ffffff;
     color: #333;
     padding: 2rem;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+* {
+  padding: 0;
+}
+button.neumorphic {
+  width: 15rem;
+  height: 10rem;
+  border: 0.6rem solid rgb(255, 255, 255);
+  border-radius: 1rem;
+  color: hsl(0 0% 10%);
+  background: rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  margin-left: .5rem;
+  cursor: pointer;
+  
+  --shadow: 
+    -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+    .5rem .5rem 1rem hsl(0 0% 50% / .5);
+  box-shadow: var(--shadow);
+  outline: none;
+  transition: all 0.1s;
 }
 
-.fundo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+button.neumorphic:hover, button.neumorphic:focus-visible {
+  color: hsl(10 80% 50%);
+  transform: scale(1.1);
 }
 
-.logo {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
+button.neumorphic:active, button.neumorphic.active {
+  box-shadow: var(--shadow), inset .5rem .5rem 1rem hsla(0, 2%, 8%, 0.5), inset -.5rem -.5rem 1rem hsla(0, 0%, 6%, 0.75);
+  color: hsl(10 80% 50%);
 }
 
-.texto-principal {
-    font-size: 1.2rem;
-    text-align: center;
+button.neumorphic i {
+  font-size: 3rem;
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button.neumorphic img {
+  height: 75px;
+  width: 80px;
+  justify-content: center;
 }
 
-.mobile-menu {
-    display: none;
-    cursor: pointer;
+button.neumorphic span {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
 }
 
-.mobile-menu .line {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-    transition: 0.3s;
+
+.buttons {
+  display: grid;
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+  align-items: center;
+  gap: 7rem;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
+/* Ajustes para telas entre 999px e 600px (Tablets) */
+@media screen and (max-width: 999px) {
+  button.neumorphic {
+    width: 10rem;
+    height: 8rem;
+    margin-left: 15%;
+  }
+
+  button.neumorphic i {
+    font-size: 2rem;
+  }
+
+  button.neumorphic img {
+    height: 65px;
+    width: 70px;
+  }
+
+  button.neumorphic span {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+    gap: 2rem;
+  }
 }
 
-.nav-list li {
-    margin-left: 120px;
+/* Ajustes para telas menores que 600px (Smartphones) */
+@media screen and (max-width: 600px) {
+  button.neumorphic {
+    width: 8.5rem;
+    height: 7.5rem;
+    margin-left: 15%;
+  }
+
+  button.neumorphic i {
+    font-size: 2rem;
+  }
+
+  button.neumorphic img {
+    height: 65px;
+    width: 70px;
+  }
+
+  button.neumorphic span {
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+    gap: 1.5rem;
+  }
 }
+/* Ajustes para telas menores que 400px (Smartphones) */
+@media screen and (max-width: 400px) {
+  button.neumorphic {
+    width: 8.5rem;
+    height: 7.5rem;
+    margin-left: 10%;
+  }
 
-.nav-list a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
+  button.neumorphic i {
+    font-size: 2rem;
+  }
 
-.nav-list a:hover {
-    opacity: 0.7;
-}
+  button.neumorphic img {
+    height: 65px;
+    width: 70px;
+  }
 
-/* Responsividade */
-@media (max-width: 999px) {
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 90vh;
-        background: #23232e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
+  button.neumorphic span {
+    font-size: 0.8rem;
+  }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .nav-list.active {
-        transform: translateX(0);
-    }
-
-    .nav-list.active li {
-        opacity: 1;
-    }
-
-    .mobile-menu.active .line1 {
-        transform: rotate(-45deg) translate(-8px, 8px);
-    }
-
-    .mobile-menu.active .line2 {
-        opacity: 0;
-    }
-
-    .mobile-menu.active .line3 {
-        transform: rotate(45deg) translate(-5px, -7px);
-    }
+  .buttons {
+    grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+    gap: 1.5rem;
+  }
 }
