@@ -30,8 +30,8 @@ body {
     overflow: hidden; /* Ensure inner content is contained within the border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff; /* Optional: Background color for album */
-    width: 90%; /* Ensure the album does not occupy the entire width */
-    max-width: 700px; /* Set a maximum width for better appearance */
+    width: 60%; /* Ensure the album does not occupy the entire width */
+    max-width: 600px; /* Set a maximum width for better appearance */
 }
 
 .imagens {
